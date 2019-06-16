@@ -5,9 +5,9 @@
 
         <a-form layout="vertical">
           <a-form-item
-            label="昵称"
+            label="Nickname"
           >
-            <a-input placeholder="给自己起个名字" />
+            <a-input placeholder="Give yourself a name" />
           </a-form-item>
           <a-form-item
             label="Bio"
@@ -16,13 +16,13 @@
           </a-form-item>
 
           <a-form-item
-            label="电子邮件"
+            label="Email"
             :required="false"
           >
             <a-input placeholder="exp@admin.com"/>
           </a-form-item>
           <a-form-item
-            label="加密方式"
+            label="Encryption"
             :required="false"
           >
             <a-select defaultValue="aes-256-cfb">
@@ -32,21 +32,21 @@
             </a-select>
           </a-form-item>
           <a-form-item
-            label="连接密码"
+            label="Connection password"
             :required="false"
           >
             <a-input placeholder="h3gSbecd"/>
           </a-form-item>
           <a-form-item
-            label="登录密码"
+            label="Login password"
             :required="false"
           >
-            <a-input placeholder="密码"/>
+            <a-input placeholder="password"/>
           </a-form-item>
 
           <a-form-item>
-            <a-button type="primary">提交</a-button>
-            <a-button style="margin-left: 8px">保存</a-button>
+            <a-button type="primary">Submit</a-button>
+            <a-button style="margin-left: 8px">Save</a-button>
           </a-form-item>
         </a-form>
 
@@ -87,11 +87,11 @@ export default {
         outputType: 'jpeg',
         canScale: false,
         autoCrop: true,
-        // 只有自动截图开启 宽度高度才生效
+        // Only the automatic screenshot opens the width height to take effect.
         autoCropWidth: 180,
         autoCropHeight: 180,
         fixedBox: true,
-        // 开启宽度和高度比例
+        // Open width and height ratio
         fixed: true,
         fixedNumber: [1, 1]
       }

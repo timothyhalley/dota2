@@ -1,11 +1,11 @@
-# AvatarList 用户头像列表
+# AvatarList User avatar list
 
 
-一组用户头像，常用在项目/团队成员列表。可通过设置 `size` 属性来指定头像大小。
+一Group user avatars, commonly used in project/team member lists. The avatar size can be specified by setting the `size` attribute.
 
 
 
-引用方式：
+Reference method:
 
 ```javascript
 import AvatarList from '@/components/AvatarList'
@@ -25,21 +25,21 @@ export default {
 
 ```html
 <avatar-list size="mini">
-    <avatar-list-item tips="Jake" src="https://gw.alipayobjects.com/zos/rmsportal/zOsKZmFRdUtvpqCImOVY.png" />
-    <avatar-list-item tips="Andy" src="https://gw.alipayobjects.com/zos/rmsportal/sfjbOqnsXXJgNCjCzDBL.png" />
-    <avatar-list-item tips="Niko" src="https://gw.alipayobjects.com/zos/rmsportal/kZzEzemZyKLKFsojXItE.png" />
+    <avatar-list-item tips="Timo" src="https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/000/002/landscape/angularjs.png" />
+    <avatar-list-item tips="Adro" src="https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/001/036/square_256/vue.png" />
+    <avatar-list-item tips="Vitx" src="https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/001/123/landscape/electronlogo.png" />
 </avatar-list>
 ```
 或
 ```html
 <avatar-list :max-length="3">
-    <avatar-list-item tips="Jake" src="https://gw.alipayobjects.com/zos/rmsportal/zOsKZmFRdUtvpqCImOVY.png" />
-    <avatar-list-item tips="Andy" src="https://gw.alipayobjects.com/zos/rmsportal/sfjbOqnsXXJgNCjCzDBL.png" />
-    <avatar-list-item tips="Niko" src="https://gw.alipayobjects.com/zos/rmsportal/kZzEzemZyKLKFsojXItE.png" />
-    <avatar-list-item tips="Niko" src="https://gw.alipayobjects.com/zos/rmsportal/kZzEzemZyKLKFsojXItE.png" />
-    <avatar-list-item tips="Niko" src="https://gw.alipayobjects.com/zos/rmsportal/kZzEzemZyKLKFsojXItE.png" />
-    <avatar-list-item tips="Niko" src="https://gw.alipayobjects.com/zos/rmsportal/kZzEzemZyKLKFsojXItE.png" />
-    <avatar-list-item tips="Niko" src="https://gw.alipayobjects.com/zos/rmsportal/kZzEzemZyKLKFsojXItE.png" />
+    <avatar-list-item tips="Jake" src="https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/000/002/landscape/angularjs.png" />
+    <avatar-list-item tips="Andy" src="https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/001/036/square_256/vue.png" />
+    <avatar-list-item tips="Niko" src="https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/001/036/square_256/vue.png" />
+    <avatar-list-item tips="Niko" src="https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/000/002/landscape/angularjs.png" />
+    <avatar-list-item tips="Niko" src="https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/001/123/landscape/electronlogo.png" />
+    <avatar-list-item tips="Niko" src="https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/001/123/landscape/electronlogo.png" />
+    <avatar-list-item tips="Niko" src="https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/000/002/landscape/angularjs.png" />
 </avatar-list>
 ```
 
@@ -49,16 +49,16 @@ export default {
 
 ### AvatarList
 
-| 参数               | 说明       | 类型                                 | 默认值       |
-| ---------------- | -------- | ---------------------------------- | --------- |
-| size             | 头像大小     | `large`、`small` 、`mini`, `default` | `default` |
-| maxLength        | 要显示的最大项目 | number                             | -         |
-| excessItemsStyle | 多余的项目风格  | CSSProperties                      | -         |
+| Parameters        | Description                 | Type                                | Default     |
+| ----------------  | --------------------------- | ----------------------------------  | --------- |
+| size              | Avatar size                 | `large`、`small` 、`mini`, `default` | `default` |
+| maxLength         | The largest item to display | number                              | -         |
+| excessItemsStyle  | Extra project style         | CSSProperties                       | -         |
 
 ### AvatarList.Item
 
-| 参数   | 说明     | 类型        | 默认值 |
+| parameter   | Description     | Types of        | Defaults |
 | ---- | ------ | --------- | --- |
-| tips | 头像展示文案 | string | -   |
-| src  | 头像图片连接 | string    | -   |
+| tips | Avatar display copy | string | -   |
+| src  | Avatar image connection | string    | -   |
 

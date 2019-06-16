@@ -1,6 +1,6 @@
 <template>
   <a-modal
-    title="修改头像"
+    title="Modify avatar"
     :visible="visible"
     :maskClosable="false"
     :confirmLoading="confirmLoading"
@@ -28,8 +28,8 @@
     </a-row>
 
     <template slot="footer">
-      <a-button key="back" @click="cancelHandel">取消</a-button>
-      <a-button key="submit" type="primary" :loading="confirmLoading" @click="okHandel">保存</a-button>
+      <a-button key="back" @click="cancelHandel">Cancel</a-button>
+      <a-button key="submit" type="primary" :loading="confirmLoading" @click="okHandel">Save</a-button>
     </template>
   </a-modal>
 </template>
@@ -62,7 +62,7 @@ export default {
     edit (id) {
       this.visible = true
       this.id = id
-      /* 获取原始头像 */
+      /* Get the original avatar */
     },
     close () {
       this.id = null
@@ -78,7 +78,7 @@ export default {
       setTimeout(() => {
         vm.confirmLoading = false
         vm.close()
-        vm.$message.success('上传头像成功')
+        vm.$message.success('Upload avatar successfully')
       }, 2000)
     },
 
