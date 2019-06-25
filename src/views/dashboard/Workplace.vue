@@ -8,13 +8,13 @@
     <div slot="extra">
       <a-row class="more-info">
         <a-col :span="8">
-          <head-info title="项目数" content="56" :center="false" :bordered="false"/>
+          <head-info title="Number of items" content="56" :center="false" :bordered="false"/>
         </a-col>
         <a-col :span="8">
-          <head-info title="团队排名" content="8/24" :center="false" :bordered="false"/>
+          <head-info title="Team ranking" content="8/24" :center="false" :bordered="false"/>
         </a-col>
         <a-col :span="8">
-          <head-info title="项目访问" content="2,223" :center="false" />
+          <head-info title="Project visit" content="2,223" :center="false" />
         </a-col>
       </a-row>
     </div>
@@ -27,9 +27,9 @@
             :loading="loading"
             style="margin-bottom: 24px;"
             :bordered="false"
-            title="进行中的项目"
+            title="Ongoing project"
             :body-style="{ padding: 0 }">
-            <a slot="extra">全部项目</a>
+            <a slot="extra">All items</a>
             <div>
               <a-card-grid class="project-card-grid" :key="i" v-for="(item, i) in projects">
                 <a-card :bordered="false" :body-style="{ padding: 0 }">
@@ -43,22 +43,22 @@
                     </div>
                   </a-card-meta>
                   <div class="project-item">
-                    <a href="/#/">科学搬砖组</a>
-                    <span class="datetime">9小时前</span>
+                    <a href="/#/">Scientific moving bricks</a>
+                    <span class="datetime">9 hours ago</span>
                   </div>
                 </a-card>
               </a-card-grid>
             </div>
           </a-card>
 
-          <a-card :loading="loading" title="动态" :bordered="false">
+          <a-card :loading="loading" title="dynamic" :bordered="false">
             <a-list>
               <a-list-item :key="index" v-for="(item, index) in activities">
                 <a-list-item-meta>
                   <a-avatar slot="avatar" :src="item.user.avatar" />
                   <div slot="title">
                     <span>{{ item.user.nickname }}</span>&nbsp;
-                    在&nbsp;<a href="#">{{ item.project.name }}</a>&nbsp;
+                    in&nbsp;<a href="#">{{ item.project.name }}</a>&nbsp;
                     <span>{{ item.project.action }}</span>&nbsp;
                     <a href="#">{{ item.project.event }}</a>
                   </div>
@@ -75,24 +75,24 @@
           :md="24"
           :sm="24"
           :xs="24">
-          <a-card title="快速开始 / 便捷导航" style="margin-bottom: 24px" :bordered="false" :body-style="{padding: 0}">
+          <a-card title="Quick start / Convenient navigation" style="margin-bottom: 24px" :bordered="false" :body-style="{padding: 0}">
             <div class="item-group">
-              <a>操作一</a>
-              <a>操作二</a>
-              <a>操作三</a>
-              <a>操作四</a>
-              <a>操作五</a>
-              <a>操作六</a>
-              <a-button size="small" type="primary" ghost icon="plus">添加</a-button>
+              <a>One</a>
+              <a>Two</a>
+              <a>Three</a>
+              <a>Four</a>
+              <a>Five</a>
+              <a>Six</a>
+              <a-button size="small" type="primary" ghost icon="plus">Add to</a-button>
             </div>
           </a-card>
-          <a-card title="XX 指数" style="margin-bottom: 24px" :loading="radarLoading" :bordered="false" :body-style="{ padding: 0 }">
+          <a-card title="XX index" style="margin-bottom: 24px" :loading="radarLoading" :bordered="false" :body-style="{ padding: 0 }">
             <div style="min-height: 400px;">
               <!-- :scale="scale" :axis1Opts="axis1Opts" :axis2Opts="axis2Opts"  -->
               <radar :data="radarData" />
             </div>
           </a-card>
-          <a-card :loading="loading" title="团队" :bordered="false">
+          <a-card :loading="loading" title="team" :bordered="false">
             <div class="members">
               <a-row>
                 <a-col :span="12" v-for="(item, index) in teams" :key="index">
@@ -170,12 +170,12 @@ export default {
         max: 80
       }],
       axisData: [
-        { item: '引用', a: 70, b: 30, c: 40 },
-        { item: '口碑', a: 60, b: 70, c: 40 },
-        { item: '产量', a: 50, b: 60, c: 40 },
-        { item: '贡献', a: 40, b: 50, c: 40 },
-        { item: '热度', a: 60, b: 70, c: 40 },
-        { item: '引用', a: 70, b: 50, c: 40 }
+        { item: 'Reference', a: 70, b: 30, c: 40 },
+        { item: 'Word of mouth', a: 60, b: 70, c: 40 },
+        { item: 'Yield', a: 50, b: 60, c: 40 },
+        { item: 'Contribution', a: 40, b: 50, c: 40 },
+        { item: 'Appoint', a: 70, b: 50, c: 40 }
+        { item: 'Heat', a: 60, b: 70, c: 40 },
       ],
       radarData: []
     }
@@ -232,7 +232,7 @@ export default {
           const dv = new DataSet.View().source(res.result)
           dv.transform({
             type: 'fold',
-            fields: ['个人', '团队', '部门'],
+            fields: ['personal', 'team', 'department'],
             key: 'user',
             value: 'score'
           })
