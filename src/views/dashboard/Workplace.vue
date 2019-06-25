@@ -174,7 +174,7 @@ export default {
         { item: 'Word of mouth', a: 60, b: 70, c: 40 },
         { item: 'Yield', a: 50, b: 60, c: 40 },
         { item: 'Contribution', a: 40, b: 50, c: 40 },
-        { item: 'Appoint', a: 70, b: 50, c: 40 }
+        { item: 'Appoint', a: 70, b: 50, c: 40 },
         { item: 'Heat', a: 60, b: 70, c: 40 },
       ],
       radarData: []
