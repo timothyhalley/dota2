@@ -19,7 +19,7 @@ const serverList = (options) => {
       key: tmpKey,
       id: tmpKey,
       no: 'No ' + tmpKey,
-      description: '这是一段描述',
+      description: 'This is a description',
       callNo: Mock.mock('@integer(1, 999)'),
       status: Mock.mock('@integer(0, 3)'),
       updatedAt: Mock.mock('@datetime'),
@@ -40,49 +40,49 @@ const projects = () => {
   return builder({
     'data': [{
       id: 1,
-      cover: 'https://gw.alipayobjects.com/zos/rmsportal/WdGqmHpayyMjiEhcKoVE.png',
-      title: 'Alipay',
-      description: '那是一种内在的东西， 他们到达不了，也无法触及的',
+      cover: 'https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/000/256/square_256/nodejslogo.png',
+      title: 'NodeJS',
+      description: 'Node.js Foundation is a collaborative open source project.',
       status: 1,
-      updatedAt: '2018-07-26 00:00:00'
+      updatedAt: '2019-06-27 00:00:00'
     },
     {
       id: 2,
-      cover: 'https://gw.alipayobjects.com/zos/rmsportal/zOsKZmFRdUtvpqCImOVY.png',
+      cover: 'https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/000/002/square_256/angularjs.png',
       title: 'Angular',
-      description: '希望是一个好东西，也许是最好的，好东西是不会消亡的',
+      description: 'AngularJS is a JavaScript-based open-source front-end web framework.',
       status: 1,
-      updatedAt: '2018-07-26 00:00:00'
+      updatedAt: '2019-06-27 00:00:00'
     },
     {
       id: 3,
-      cover: 'https://gw.alipayobjects.com/zos/rmsportal/dURIMkkrRFpPgTuzkwnB.png',
+      cover: 'https://d2.alternativeto.net/dist/icons/ant-design_145275.png?width=128&height=128&mode=crop&upscale=false',
       title: 'Ant Design',
-      description: '城镇中有那么多的酒馆，她却偏偏走进了我的酒馆',
+      description: 'A design system with values of Nature and Determinacy.',
       status: 1,
       updatedAt: '2018-07-26 00:00:00'
     },
     {
       id: 4,
-      cover: 'https://gw.alipayobjects.com/zos/rmsportal/sfjbOqnsXXJgNCjCzDBL.png',
-      title: 'Ant Design Pro',
-      description: '那时候我只会想自己想要什么，从不想自己拥有什么',
+      cover: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoam6g8lje8sCjfq1BK9E_CNSafG8_G3yc9JnX7mFcnOXZTZELKQ',
+      title: 'CascadeZen Show',
+      description: 'CascadeZen pathway to nirvana!',
       status: 1,
       updatedAt: '2018-07-26 00:00:00'
     },
     {
       id: 5,
-      cover: 'https://gw.alipayobjects.com/zos/rmsportal/siCrBXXhmvTQGWPNLBow.png',
-      title: 'Bootstrap',
-      description: '凛冬将至',
+      cover: 'https://demos.creative-tim.com/argon-dashboard-pro/assets/img/theme/vue.jpg',
+      title: 'Vue JS',
+      description: 'The progressive JS framwork',
       status: 1,
       updatedAt: '2018-07-26 00:00:00'
     },
     {
       id: 6,
-      cover: 'https://gw.alipayobjects.com/zos/rmsportal/ComBAopevLwENQdKWiIn.png',
-      title: 'Vue',
-      description: '生命就像一盒巧克力，结果往往出人意料',
+      cover: 'https://i1.wp.com/kubedex.com/wp-content/uploads/2018/09/mongodb.png?fit=256%2C256&ssl=1',
+      title: 'MongoDB',
+      description: 'MongoDB is a cross-platform document-oriented database program.',
       status: 1,
       updatedAt: '2018-07-26 00:00:00'
     }
@@ -98,13 +98,13 @@ const activity = () => {
   return builder([{
     id: 1,
     user: {
-      nickname: '@name',
-      avatar: 'https://gw.alipayobjects.com/zos/rmsportal/BiazfanxmamNRoxxVxka.png'
+      nickname: 'GOOSE THE CAT',
+      avatar: 'https://terrigen-cdn-dev.marvel.com/content/prod/1x/247gse_ons_crd_01.jpg'
     },
     project: {
-      name: '白鹭酱油开发组',
-      action: '更新',
-      event: '番组计划'
+      name: 'Project Pegasus',
+      action: 'affectionate',
+      event: 'Tabby cat that joins Carol Danvers and Nick Fury on their adventure.'
     },
     time: '2018-08-23 14:47:00'
   },
@@ -179,27 +179,27 @@ const activity = () => {
 const teams = () => {
   return builder([{
     id: 1,
-    name: '科学搬砖组',
-    avatar: 'https://gw.alipayobjects.com/zos/rmsportal/BiazfanxmamNRoxxVxka.png'
+    name: 'HYDRA',
+    avatar: 'https://terrigen-cdn-dev.marvel.com/content/prod/1x/hydraorganization_head.jpg'
   },
   {
     id: 2,
-    name: '程序员日常',
-    avatar: 'https://gw.alipayobjects.com/zos/rmsportal/cnrhVkzwxjPwAaCfPbdc.png'
+    name: 'WARRIORS 3',
+    avatar: 'https://terrigen-cdn-dev.marvel.com/content/prod/1x/118wrs_ons_crd_02.jpg'
   },
   {
     id: 1,
-    name: '设计天团',
-    avatar: 'https://gw.alipayobjects.com/zos/rmsportal/gaOngJwsRYRaVAuXXcmB.png'
+    name: 'STARFORCE',
+    avatar: 'https://terrigen-cdn-dev.marvel.com/content/prod/1x/260sfc_ons_crd_01.jpg'
   },
   {
     id: 1,
-    name: '中二少女团',
-    avatar: 'https://gw.alipayobjects.com/zos/rmsportal/ubnKSIfAJTxIgXOKlciN.png'
+    name: 'GUN NUNS',
+    avatar: 'https://terrigen-cdn-dev.marvel.com/content/prod/1x/gun_nuns.jpg'
   },
   {
     id: 1,
-    name: '骗你学计算机',
+    name: 'REVENGERS',
     avatar: 'https://gw.alipayobjects.com/zos/rmsportal/WhxKECPNujWoWEFNdnJE.png'
   }
   ])
@@ -207,40 +207,40 @@ const teams = () => {
 
 const radar = () => {
   return builder([{
-    item: '引用',
-    '个人': 70,
-    '团队': 30,
-    '部门': 40
+    item: 'Reference',
+    'personal': 70,
+    'team': 30,
+    'department': 40
   },
   {
-    item: '口碑',
-    '个人': 60,
-    '团队': 70,
-    '部门': 40
+    item: 'Word of mouth',
+    'personal': 60,
+    'team': 70,
+    'department': 40
   },
   {
-    item: '产量',
-    '个人': 50,
-    '团队': 60,
-    '部门': 40
+    item: 'Yield',
+    'personal': 50,
+    'team': 60,
+    'department': 40
   },
   {
-    item: '贡献',
-    '个人': 40,
-    '团队': 50,
-    '部门': 40
+    item: 'Contribution',
+    'personal': 40,
+    'team': 50,
+    'department': 40
   },
   {
-    item: '热度',
-    '个人': 60,
-    '团队': 70,
-    '部门': 40
+    item: 'Fervid',
+    'personal': 60,
+    'team': 70,
+    'department': 40
   },
   {
-    item: '引用',
-    '个人': 70,
-    '团队': 50,
-    '部门': 40
+    item: 'Citation',
+    'personal': 70,
+    'team': 50,
+    'department': 40
   }
   ])
 }

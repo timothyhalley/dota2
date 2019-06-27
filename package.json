@@ -53,8 +53,6 @@
     "eslint-plugin-vue": "^5.0.0",
     "less": "^3.8.1",
     "less-loader": "^4.1.0",
-    "opencollective": "^1.0.3",
-    "opencollective-postinstall": "^2.0.2",
     "vue-svg-icon-loader": "^2.1.1",
     "vue-template-compiler": "^2.5.22",
     "webpack-theme-color-replacer": "^1.1.5"
@@ -129,9 +127,5 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 10"
-  ],
-  "collective": {
-    "type": "opencollective",
-    "url": "https://opencollective.com/ant-design-pro-vue"
-  }
+  ]
 }

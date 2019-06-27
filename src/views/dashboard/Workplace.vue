@@ -8,7 +8,7 @@
     <div slot="extra">
       <a-row class="more-info">
         <a-col :span="8">
-          <head-info title="Number of items" content="56" :center="false" :bordered="false"/>
+          <head-info title="Open items" content="56" :center="false" :bordered="false"/>
         </a-col>
         <a-col :span="8">
           <head-info title="Team ranking" content="8/24" :center="false" :bordered="false"/>
@@ -27,7 +27,7 @@
             :loading="loading"
             style="margin-bottom: 24px;"
             :bordered="false"
-            title="Ongoing project"
+            title="Ongoing Projects"
             :body-style="{ padding: 0 }">
             <a slot="extra">All items</a>
             <div>
@@ -43,22 +43,22 @@
                     </div>
                   </a-card-meta>
                   <div class="project-item">
-                    <a href="/#/">Scientific moving bricks</a>
-                    <span class="datetime">9 hours ago</span>
+                    <a href="/#/">Scientific bricks</a>
+                    <span class="datetime">Previous 9 hours</span>
                   </div>
                 </a-card>
               </a-card-grid>
             </div>
           </a-card>
 
-          <a-card :loading="loading" title="dynamic" :bordered="false">
+          <a-card :loading="loading" title="Dynamic" :bordered="false">
             <a-list>
               <a-list-item :key="index" v-for="(item, index) in activities">
                 <a-list-item-meta>
                   <a-avatar slot="avatar" :src="item.user.avatar" />
                   <div slot="title">
                     <span>{{ item.user.nickname }}</span>&nbsp;
-                    in&nbsp;<a href="#">{{ item.project.name }}</a>&nbsp;
+                    在&nbsp;<a href="#">{{ item.project.name }}</a>&nbsp;
                     <span>{{ item.project.action }}</span>&nbsp;
                     <a href="#">{{ item.project.event }}</a>
                   </div>
@@ -75,7 +75,7 @@
           :md="24"
           :sm="24"
           :xs="24">
-          <a-card title="Quick start / Convenient navigation" style="margin-bottom: 24px" :bordered="false" :body-style="{padding: 0}">
+          <a-card title="Quick start / Navigation" style="margin-bottom: 24px" :bordered="false" :body-style="{padding: 0}">
             <div class="item-group">
               <a>One</a>
               <a>Two</a>
@@ -86,13 +86,13 @@
               <a-button size="small" type="primary" ghost icon="plus">Add to</a-button>
             </div>
           </a-card>
-          <a-card title="XX index" style="margin-bottom: 24px" :loading="radarLoading" :bordered="false" :body-style="{ padding: 0 }">
+          <a-card title="XX Index" style="margin-bottom: 24px" :loading="radarLoading" :bordered="false" :body-style="{ padding: 0 }">
             <div style="min-height: 400px;">
               <!-- :scale="scale" :axis1Opts="axis1Opts" :axis2Opts="axis2Opts"  -->
               <radar :data="radarData" />
             </div>
           </a-card>
-          <a-card :loading="loading" title="team" :bordered="false">
+          <a-card :loading="loading" title="Team" :bordered="false">
             <div class="members">
               <a-row>
                 <a-col :span="12" v-for="(item, index) in teams" :key="index">
@@ -113,15 +113,11 @@
 <script>
 import { timeFix } from '@/utils/util'
 import { mapGetters } from 'vuex'
-
 import { PageView } from '@/layouts'
 import HeadInfo from '@/components/tools/HeadInfo'
 import { Radar } from '@/components'
-
 import { getRoleList, getServiceList } from '@/api/manage'
-
 const DataSet = require('@antv/data-set')
-
 export default {
   name: 'Workplace',
   components: {
@@ -134,13 +130,11 @@ export default {
       timeFix: timeFix(),
       avatar: '',
       user: {},
-
       projects: [],
       loading: true,
       radarLoading: true,
       activities: [],
       teams: [],
-
       // data
       axis1Opts: {
         dataKey: 'item',
@@ -174,8 +168,8 @@ export default {
         { item: 'Word of mouth', a: 60, b: 70, c: 40 },
         { item: 'Yield', a: 50, b: 60, c: 40 },
         { item: 'Contribution', a: 40, b: 50, c: 40 },
-        { item: 'Appoint', a: 70, b: 50, c: 40 },
-        { item: 'Heat', a: 60, b: 70, c: 40 },
+        { item: 'Appoint', a: 60, b: 70, c: 40 },
+        { item: 'Heat', a: 70, b: 50, c: 40 }
       ],
       radarData: []
     }
@@ -188,11 +182,9 @@ export default {
   created () {
     this.user = this.userInfo
     this.avatar = this.userInfo.avatar
-
     getRoleList().then(res => {
       console.log('workplace -> call getRoleList()', res)
     })
-
     getServiceList().then(res => {
       console.log('workplace -> call getServiceList()', res)
     })
@@ -226,7 +218,6 @@ export default {
     },
     initRadar () {
       this.radarLoading = true
-
       this.$http.get('/workplace/radar')
         .then(res => {
           const dv = new DataSet.View().source(res.result)
@@ -236,7 +227,6 @@ export default {
             key: 'user',
             value: 'score'
           })
-
           this.radarData = dv.rows
           this.radarLoading = false
         })
@@ -247,10 +237,8 @@ export default {
 
 <style lang="less" scoped>
   .project-list {
-
     .card-title {
       font-size: 0;
-
       a {
         color: rgba(0, 0, 0, 0.85);
         margin-left: 12px;
@@ -259,7 +247,6 @@ export default {
         display: inline-block;
         vertical-align: top;
         font-size: 14px;
-
         &:hover {
           color: #1890ff;
         }
@@ -282,7 +269,6 @@ export default {
         color: rgba(0, 0, 0, 0.45);
         display: inline-block;
         flex: 1 1 0;
-
         &:hover {
           color: #1890ff;
         }
@@ -300,7 +286,6 @@ export default {
       overflow: hidden;
     }
   }
-
   .item-group {
     padding: 20px 0 8px 24px;
     font-size: 0;
@@ -312,7 +297,6 @@ export default {
       width: 25%;
     }
   }
-
   .members {
     a {
       display: block;
@@ -336,25 +320,19 @@ export default {
       }
     }
   }
-
   .mobile {
-
     .project-list {
-
       .project-card-grid {
         width: 100%;
       }
     }
-
     .more-info {
       border: 0;
       padding-top: 16px;
       margin: 16px 0 16px;
     }
-
     .headerContent .title .welcome-text {
       display: none;
     }
   }
-
 </style>
