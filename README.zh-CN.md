@@ -1,6 +1,6 @@
 [English](./README.md) | 简体中文
 
-<h1 align="center">Ant Design Pro Vue</h1>
+<h1 align="center">CascadeZen Pro Vue</h1>
 
 <div align="center">
 An out-of-box UI solution for enterprise applications as a Vue boilerplate. based on  <a href="https://vuecomponent.github.io/ant-design-vue/docs/vue/introduce-cn/" target="_blank">Ant Design of Vue</a>
@@ -30,16 +30,16 @@ An out-of-box UI solution for enterprise applications as a Vue boilerplate. base
 Overview
 ----
 
-基于 [Ant Design of Vue](https://vuecomponent.github.io/ant-design-vue/docs/vue/introduce-cn/) 实现的 [Ant Design Pro](https://pro.ant.design/) 
+基于 [Ant Design of Vue](https://vuecomponent.github.io/ant-design-vue/docs/vue/introduce-cn/) Achieved [CascadeZen Pro](https://www.cascadezen.com/) 
 
-![工作台-多标签模式](https://static-2.loacg.com/open/static/github/20190224163345.jpg)
+![Workbench - multi-label mode](https://static-2.loacg.com/open/static/github/20190224163345.jpg)
 
-![工作台+设置菜单](https://static-2.loacg.com/open/static/github/20181126112124.png)
+![Workbench + setup menu](https://static-2.loacg.com/open/static/github/20181126112124.png)
 
-![个人设置](https://static-2.loacg.com/open/static/github/20180916-134251.png)
+![Personal settings](https://static-2.loacg.com/open/static/github/20180916-134251.png)
 
 
-环境和依赖
+Environment and dependence
 ----
 
 - node
@@ -47,32 +47,32 @@ Overview
 - webpack
 - eslint
 - @vue/cli ~3
-- [ant-design-vue](https://github.com/vueComponent/ant-design-vue) - Ant Design Of Vue 实现
-- [vue-cropper](https://github.com/xyxiao001/vue-cropper) - 头像裁剪组件
-- [@antv/g2](https://antv.alipay.com/zh-cn/index.html) - Alipay AntV 数据可视化图表
-- [Viser-vue](https://viserjs.github.io/docs.html#/viser/guide/installation)  - antv/g2 封装实现
+- [ant-design-vue](https://github.com/vueComponent/ant-design-vue) - Ant Design Of Vue achieve
+- [vue-cropper](https://github.com/xyxiao001/vue-cropper) - Avatar cropping component
+- [@antv/g2](https://antv.alipay.com/zh-cn/index.html) - Alipay AntV Data visualization chart
+- [Viser-vue](https://viserjs.github.io/docs.html#/viser/guide/installation)  - antv/g2 Package implementation
 
-> 请注意，我们强烈建议本项目使用 [Yarn](https://yarnpkg.com/) 包管理工具，这样可以与本项目演示站所加载完全相同的依赖版本 (yarn.lock) 。由于我们没有对依赖进行强制的版本控制，采用非 yarn 包管理进行引入时，可能由于 Pro 所依赖的库已经升级版本而引入了新版本所导致的问题。作者可能会由于时间问题无法及时排查而导致您采用本项目作为基项目而出现问题。
+> Please note that we strongly recommend that the project use the [Yarn](https://yarnpkg.com/) package management tool so that it can be loaded with exactly the same dependent version (yarn.lock) as the project demo site. Since we did not enforce versioning of dependencies, when introduced with non-yarn package management, the new version may be introduced due to an upgraded version of the library that Pro relies on. The author may have problems with the adoption of this project as a base project due to the inability to promptly review due to time issues.
 
 
 
-项目下载和运行
+Project download and run
 ----
 
-- 拉取项目代码
+- Pull project code
 ```bash
-git clone https://github.com/sendya/ant-design-pro-vue.git
-cd ant-design-pro-vue
+git clone https://github.com/timothyhalley/dota2
+cd dota2
 ```
 
-- 安装依赖
+- Installation dependency
 ```
-yarn install
+npm install
 ```
 
-- 开发模式运行
+- Development mode operation
 ```
-yarn run serve
+npm run serve
 ```
 
 - 编译项目

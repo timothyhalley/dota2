@@ -3,13 +3,13 @@
     <a-card :bordered="false">
       <a-row>
         <a-col :sm="8" :xs="24">
-          <head-info title="我的待办" content="8个任务" :bordered="true"/>
+          <head-info title="My to-do" content="8 missions" :bordered="true"/>
         </a-col>
         <a-col :sm="8" :xs="24">
-          <head-info title="本周任务平均处理时间" content="32分钟" :bordered="true"/>
+          <head-info title="Average task processing time this week" content="32 minutes" :bordered="true"/>
         </a-col>
         <a-col :sm="8" :xs="24">
-          <head-info title="本周完成任务数" content="24个"/>
+          <head-info title="Number of tasks completed this week" content="24"/>
         </a-col>
       </a-row>
     </a-card>
@@ -17,13 +17,13 @@
     <a-card
       style="margin-top: 24px"
       :bordered="false"
-      title="标准列表">
+      title="Standard list">
 
       <div slot="extra">
         <a-radio-group>
-          <a-radio-button>全部</a-radio-button>
-          <a-radio-button>进行中</a-radio-button>
-          <a-radio-button>等待中</a-radio-button>
+          <a-radio-button>All</a-radio-button>
+          <a-radio-button>Processing</a-radio-button>
+          <a-radio-button>Waiting</a-radio-button>
         </a-radio-group>
         <a-input-search style="margin-left: 16px; width: 272px;" />
       </div>
@@ -39,15 +39,15 @@
             <a slot="title">{{ item.title }}</a>
           </a-list-item-meta>
           <div slot="actions">
-            <a>编辑</a>
+            <a>Edit</a>
           </div>
           <div slot="actions">
             <a-dropdown>
               <a-menu slot="overlay">
-                <a-menu-item><a>编辑</a></a-menu-item>
-                <a-menu-item><a>删除</a></a-menu-item>
+                <a-menu-item><a>Edit</a></a-menu-item>
+                <a-menu-item><a>Delete</a></a-menu-item>
               </a-menu>
-              <a>更多<a-icon type="down"/></a>
+              <a>More<a-icon type="down"/></a>
             </a-dropdown>
           </div>
           <div class="list-content">
@@ -56,7 +56,7 @@
               <p>{{ item.owner }}</p>
             </div>
             <div class="list-content-item">
-              <span>开始时间</span>
+              <span>Starting time</span>
               <p>{{ item.startAt }}</p>
             </div>
             <div class="list-content-item">
@@ -77,50 +77,50 @@ import TaskForm from './modules/TaskForm'
 
 const data = []
 data.push({
-  title: 'Alipay',
-  avatar: 'https://gw.alipayobjects.com/zos/rmsportal/WdGqmHpayyMjiEhcKoVE.png',
-  description: '那是一种内在的东西， 他们到达不了，也无法触及的',
-  owner: '付晓晓',
-  startAt: '2018-07-26 22:44',
+  title: 'The Enchantress',
+  avatar: 'https://oyster.ignimgs.com/wordpress/stg.ign.com/2018/05/03.jpg',
+  description: 'A skilled trickster and sorceress, the Enchantress won’t rest until she possesses everything she desires...',
+  owner: 'Nine Realms',
+  startAt: '2019-07-01 22:44',
   progress: {
     value: 90
   }
 })
 data.push({
-  title: 'Angular',
-  avatar: 'https://gw.alipayobjects.com/zos/rmsportal/zOsKZmFRdUtvpqCImOVY.png',
-  description: '希望是一个好东西，也许是最好的，好东西是不会消亡的',
-  owner: '曲丽丽',
+  title: 'Lady Deathstrike',
+  avatar: 'https://oyster.ignimgs.com/wordpress/stg.ign.com/2018/05/06.jpg',
+  description: 'Deathstrike is one of Wolverine’s best villains.',
+  owner: 'Lady Deathstrike’s father',
   startAt: '2018-07-26 22:44',
   progress: {
     value: 54
   }
 })
 data.push({
-  title: 'Ant Design',
-  avatar: 'https://gw.alipayobjects.com/zos/rmsportal/dURIMkkrRFpPgTuzkwnB.png',
-  description: '生命就像一盒巧克力，结果往往出人意料',
-  owner: '林东东',
+  title: 'Dark Phoenix',
+  avatar: 'https://oyster.ignimgs.com/wordpress/stg.ign.com/2018/05/21.jpg',
+  description: 'A cosmic entity of rebirth, it possessed a young Jean Grey, giving her infinite power',
+  owner: 'Jean Grey',
   startAt: '2018-07-26 22:44',
   progress: {
     value: 66
   }
 })
 data.push({
-  title: 'Ant Design Pro',
-  avatar: 'https://gw.alipayobjects.com/zos/rmsportal/sfjbOqnsXXJgNCjCzDBL.png',
-  description: '城镇中有那么多的酒馆，她却偏偏走进了我的酒馆',
-  owner: '周星星',
+  title: 'Venom',
+  avatar: 'https://oyster.ignimgs.com/wordpress/stg.ign.com/2018/05/12.jpg',
+  description: 'Venom is an amplified version of his nemesis',
+  owner: 'Eddie Brock',
   startAt: '2018-07-26 22:44',
   progress: {
     value: 30
   }
 })
 data.push({
-  title: 'Bootstrap',
-  avatar: 'https://gw.alipayobjects.com/zos/rmsportal/siCrBXXhmvTQGWPNLBow.png',
-  description: '那时候我只会想自己想要什么，从不想自己拥有什么',
-  owner: '吴加好',
+  title: 'Mystique',
+  avatar: 'https://oyster.ignimgs.com/wordpress/stg.ign.com/2018/05/16.jpg',
+  description: 'Mystique is effectively immune to age or injury.',
+  owner: 'Raven Darkholme',
   startAt: '2018-07-26 22:44',
   progress: {
     status: 'exception',

@@ -111,65 +111,65 @@ const activity = () => {
   {
     id: 1,
     user: {
-      nickname: '蓝莓酱',
-      avatar: 'https://gw.alipayobjects.com/zos/rmsportal/jZUIxmJycoymBprLOUbT.png'
+      nickname: 'ANANASTASIA',
+      avatar: 'https://terrigen-cdn-dev.marvel.com/content/prod/1x/ohitsme--anna_hd.jpg'
     },
     project: {
-      name: '白鹭酱油开发组',
-      action: '更新',
-      event: '番组计划'
+      name: 'Go-between',
+      action: 'Deadpool',
+      event: 'Double-cross'
     },
     time: '2018-08-23 09:35:37'
   },
   {
     id: 1,
     user: {
-      nickname: '@name',
-      avatar: '@image(64x64)'
+      nickname: 'PHOENIX',
+      avatar: 'https://static1.srcdn.com/wordpress/wp-content/uploads/2016/10/jean-grey-dark-phoenix-suit-promotional-art.jpg?q=50&fit=crop&w=798&h=407'
     },
     project: {
-      name: '白鹭酱油开发组',
-      action: '创建',
-      event: '番组计划'
+      name: 'Jean Grey',
+      action: 'Omega mutant',
+      event: 'Telekinetic powers put her at the top'
     },
     time: '2017-05-27 00:00:00'
   },
   {
     id: 1,
     user: {
-      nickname: '曲丽丽',
-      avatar: '@image(64x64)'
+      nickname: 'THE WHITE QUEEN',
+      avatar: 'https://static2.srcdn.com/wordpress/wp-content/uploads/xmen-4-emmafrost.jpg?q=50&fit=crop&w=738'
     },
     project: {
-      name: '高逼格设计天团',
-      action: '更新',
-      event: '六月迭代'
+      name: 'Emma Frost',
+      action: 'Hallucinations - organic diamond state',
+      event: 'Astral project '
     },
     time: '2018-08-23 14:47:00'
   },
   {
     id: 1,
     user: {
-      nickname: '@name',
-      avatar: '@image(64x64)'
+      nickname: 'SHE-HULK',
+      avatar: 'https://static1.srcdn.com/wordpress/wp-content/uploads/2016/09/she-hulk-strongest-superhero.jpg?q=50&fit=crop&w=738'
     },
     project: {
-      name: '高逼格设计天团',
-      action: 'created',
-      event: '六月迭代'
+      name: 'Jennifer Walters',
+      action: 'Big kicker ',
+      event: 'Attorney for superheroes'
     },
     time: '2018-08-23 14:47:00'
   },
   {
     id: 1,
     user: {
-      nickname: '曲丽丽',
-      avatar: 'https://gw.alipayobjects.com/zos/rmsportal/BiazfanxmamNRoxxVxka.png'
+      nickname: 'CAPTAIN MARVEL',
+      avatar: 'https://static0.srcdn.com/wordpress/wp-content/uploads/2016/08/Carol-Danvers-as-Captain-Marvel-wallpaper.jpg?q=50&fit=crop&w=738'
     },
     project: {
-      name: '高逼格设计天团',
-      action: 'created',
-      event: '六月迭代'
+      name: 'Carol Danvers',
+      action: 'Absorb energy',
+      event: 'Nuclear bomb'
     },
     time: '2018-08-23 14:47:00'
   }

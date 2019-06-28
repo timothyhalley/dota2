@@ -1,20 +1,20 @@
-Table 重封装组件说明
+Table - Repackage component description
 ====
 
 
-封装说明
+Package description
 ----
 
->  基础的使用方式与 API 与 [官方版(Table)](https://vuecomponent.github.io/ant-design-vue/components/table-cn/) 本一致，在其基础上，封装了加载数据的方法。
+>  The basic usage and API are consistent with [Official version (Table)] (https://vuecomponent.github.io/ant-design-vue/components/table-cn/), on the basis of which the loading data is encapsulated. Methods.
 >
-> 你无需在你是用表格的页面进行分页逻辑处理，仅需向 Table 组件传递绑定 `:data="Promise"` 对象即可
+> You don't need to do the paging logic processing on the page you are using, just pass the binding `:data="Promise"` object to the Table component.
 
-该 `table` 由 [@Saraka](https://github.com/saraka-tsukai) 完成封装
+The `table` by [@TimothyHalley](https://github.com/timothyhalley) Complete package
 
 
-例子1
+Example 1
 ----
-（基础使用）
+(basic use)
 
 ```vue
 
@@ -41,34 +41,34 @@ Table 重封装组件说明
       return {
         columns: [
           {
-            title: '规则编号',
+            title: 'Rule number',
             dataIndex: 'no'
           },
           {
-            title: '描述',
+            title: 'Description',
             dataIndex: 'description'
           },
           {
-            title: '服务调用次数',
+            title: 'Service call count',
             dataIndex: 'callNo',
             sorter: true,
             needTotal: true,
             customRender: (text) => text + ' 次'
           },
           {
-            title: '状态',
+            title: 'Status',
             dataIndex: 'status',
             needTotal: true
           },
           {
-            title: '更新时间',
+            title: 'Update time',
             dataIndex: 'updatedAt',
             sorter: true
           }
         ],
-        // 查询条件参数
+        // Query condition parameter
         queryParam: {},
-        // 加载数据方法 必须为 Promise 对象
+        // The method of loading data must be a Promise object
         loadData: parameter => {
           return this.$http.get('/service', {
             params: Object.assign(parameter, this.queryParam)
@@ -93,10 +93,10 @@ Table 重封装组件说明
 
 
 
-例子2
+Example 2
 ----
 
-（简单的表格，最后一列是各种操作）
+(simple table, the last column is a variety of operations)
 
 ```vue
 <template>
@@ -140,34 +140,34 @@ Table 重封装组件说明
       return {
         columns: [
           {
-            title: '规则编号',
+            title: 'Rule number',
             dataIndex: 'no'
           },
           {
-            title: '描述',
+            title: 'Description',
             dataIndex: 'description'
           },
           {
-            title: '服务调用次数',
+            title: 'Service call count',
             dataIndex: 'callNo',
           },
           {
-            title: '状态',
+            title: 'Status',
             dataIndex: 'status',
           },
           {
-            title: '更新时间',
+            title: 'Update time',
             dataIndex: 'updatedAt',
           },
           {
-            table: '操作',
+            table: 'Operating',
             dataIndex: 'action',
             scopedSlots: {customRender: 'action'},
           }
         ],
-        // 查询条件参数
+        // Query condition parameter
         queryParam: {},
-        // 加载数据方法 必须为 Promise 对象
+        // The method of loading data must be a Promise object
         loadData: parameter => {
           return this.$http.get('/service', {
             params: Object.assign(parameter, this.queryParam)
@@ -194,31 +194,31 @@ Table 重封装组件说明
 
 
 
-内置方法
+Built-in method
 ----
 
-通过 `this.$refs.table` 调用
+By `this.$refs.table` transfer
 
-`this.$refs.table.refresh(true)` 刷新列表 (用户新增/修改数据后，重载列表数据)
+`this.$refs.table.refresh(true)` Refresh list (reload list data after user adds/modifies data)
 
-> 注意：要调用 `refresh(bool)` 需要给表格组件设定 `ref` 值
+> Note: To call `refresh(bool)` you need to set the `ref` value for the table component.
 >
-> `refresh()` 方法可以传一个 `bool` 值，当有传值 或值为 `true` 时，则刷新时会强制刷新到第一页（常用户页面 搜索 按钮进行搜索时，结果从第一页开始分页）
+> `refresh()` The method can pass a `bool` value. When there is a value or a value of `true`, it will be forced to refresh to the first page when refreshing (the normal user page search button searches for results, the page starts from the first page)
 
 
-内置属性
+Built-in properties
 ----
-> 除去 `a-table` 自带属性外，还而外提供了一些额外属性属性  
+> In addition to the `a-table` native property, some additional property properties are provided.  
 
   
-| 属性           | 说明                                            | 类型              | 默认值 |
+| Attribute           | Description                                            | Type              | Defaults |
 | -------------- | ----------------------------------------------- | ----------------- | ------ |
-| alert          | 设置是否显示表格信息栏                          | [object, boolean] | null   |
-| showPagination | 显示分页选择器，可传 'auto' \| boolean          | [string, boolean] | 'auto' |
-| data           | 加载数据方法 必须为 `Promise` 对象 **必须绑定** | Promise           | -      |
+| alert          | Set whether to display the table information bar                          | [object, boolean] | null   |
+| showPagination | Display paging selector, can pass 'auto' \| boolean          | [string, boolean] | 'auto' |
+| data           | The method of loading data must be `Promise` Object **must be bound** | Promise           | -      |
 
 
-`alert` 属性对象：
+`alert` Property object:
 
 ```javascript
 alert: {
@@ -227,41 +227,41 @@ alert: {
 }
 ```
 
-注意事项
+Precautions
 ----
 
-> 你可能需要为了与后端提供的接口返回结果一致而去修改以下代码：
-(需要注意的是，这里的修改是全局性的，意味着整个项目所有使用该 table 组件都需要遵守这个返回结果定义的字段。)
+> You may need to modify the following code in order to match the results returned by the interface provided by the backend:
+(It should be noted that the changes here are global, meaning that all use of the table component for the entire project is subject to the fields defined by this return result.)
 
-修改 `@/components/table/index.js`  第 132 行起
+Modify `@/components/table/index.js`  From line 132
 
 
 
 ```javascript
 result.then(r => {
   this.localPagination = Object.assign({}, this.localPagination, {
-    current: r.pageNo,  // 返回结果中的当前分页数
-    total: r.totalCount, // 返回结果中的总记录数
+    current: r.pageNo,  // Returns the current number of pages in the result
+    total: r.totalCount, // Returns the total number of records in the result
     showSizeChanger: this.showSizeChanger,
     pageSize: (pagination && pagination.pageSize) ||
       this.localPagination.pageSize
   })
 
-  // 为防止删除数据后导致页面当前页面数据长度为 0 ,自动翻页到上一页
+  // To prevent the current page data length of the page from being 0 after deleting the data, automatically flip to the previous page.
   if (r.data.length == 0 && this.localPagination.current != 1) {
     this.localPagination.current--
     this.loadData()
     return
   }
 
-  // 这里用于判断接口是否有返回 r.totalCount 或 this.showPagination = false
-  // 当情况满足时，表示数据不满足分页大小，关闭 table 分页功能
+  // This is used to determine if the interface has a return r.totalCount 或 this.showPagination = false
+  // When the situation is satisfied, it means that the data does not meet the paging size, and the table paging function is turned off.
   !r.totalCount && ['auto', false].includes(this.showPagination) && (this.localPagination = false)
-  this.localDataSource = r.data // 返回结果中的数组数据
+  this.localDataSource = r.data // Return the array data in the result
   this.localLoading = false
 });
 ```
-返回 JSON 例子：
+Return JSON example:
 ```json
 {
   "message": "",
@@ -270,7 +270,7 @@ result.then(r => {
         id: 1,
         cover: 'https://gw.alipayobjects.com/zos/rmsportal/WdGqmHpayyMjiEhcKoVE.png',
         title: 'Alipay',
-        description: '那是一种内在的东西， 他们到达不了，也无法触及的',
+        description: 'It’s an inner thing that they can’t reach and can’t reach.',
         status: 1,
         updatedAt: '2018-07-26 00:00:00'
       },
@@ -293,7 +293,7 @@ result.then(r => {
       {
         id: 4,
         cover: 'https://gw.alipayobjects.com/zos/rmsportal/sfjbOqnsXXJgNCjCzDBL.png',
-        title: 'Ant Design Pro',
+        title: 'CascadeZen Pro',
         description: '那时候我只会想自己想要什么，从不想自己拥有什么',
         status: 1,
         updatedAt: '2018-07-26 00:00:00'
@@ -327,7 +327,7 @@ result.then(r => {
 
 
 
-更新时间
+Update time
 ----
 
-该文档最后更新于： 2019-01-21 AM 08:37
+This document was last updated on 2019-07-01 AM 08:37
