@@ -102,7 +102,7 @@
     <div class="antd-pro-pages-dashboard-analysis-twoColLayout" :class="isDesktop() ? 'desktop' : ''">
       <a-row :gutter="24">
         <a-col :xl="12" :lg="24" :md="24" :sm="24" :xs="24">
-          <a-card :loading="loading" :bordered="false" title="线上热门搜索" :style="{ marginTop: '24px', minHeight: '500px' }">
+          <a-card :loading="loading" :bordered="false" title="Online popular search" :style="{ marginTop: '24px', minHeight: '500px' }">
             <a-dropdown :trigger="['click']" placement="bottomLeft" slot="extra">
               <a class="ant-dropdown-link" href="#">
                 <a-icon type="ellipsis" />
@@ -216,7 +216,7 @@ import moment from 'moment'
 import { ChartCard, MiniArea, MiniBar, MiniProgress, RankList, Bar, Trend, NumberInfo, MiniSmoothArea } from '@/components'
 import { mixinDevice } from '@/utils/mixin'
 
-const thing1 =
+const usaStates =
   [
     'AL',
     'NM',
@@ -230,26 +230,57 @@ const thing1 =
     'OR',
     'UT',
     'MT'
-  ];
+  ]
+
+const usaMonths =
+  [
+    'JAN',
+    'FEB',
+    'MAR',
+    'APR',
+    'MAY',
+    'JUN',
+    'JUL',
+    'AUG',
+    'SEP',
+    'OCT',
+    'NOV',
+    'DEC'
+  ]
 
 const barData = []
 const barData2 = []
 for (let i = 0; i < 12; i += 1) {
-  const stateloc = thing1[i]
   barData.push({
-    x: `${i + 1}月`,
+    x: usaMonths[i] + `(${i + 1})`,
     y: Math.floor(Math.random() * 1000) + 200
   })
   barData2.push({
-    x: `${i + 1}月`,
+    x: `${i + 1}` + usaMonths[i],
     y: Math.floor(Math.random() * 1000) + 200
   })
 }
 
+const waTowns =
+  [
+    'Sequim',
+    'Centralia',
+    'Port Townsend',
+    'Coupeville',
+    'Poulsbo',
+    'La Conner',
+    'Vashon',
+    'Snohomish',
+    'Winthrop',
+    'Carnation',
+    'Snoqualmie',
+    'Leavenworth'
+  ]
+
 const rankList = []
 for (let i = 0; i < 7; i++) {
   rankList.push({
-    name: '白鹭岛 ' + (i + 1) + ' 号店',
+    name: waTowns[i],
     total: 1234.56 - i * 100
   })
 }
@@ -309,12 +340,12 @@ for (let i = 0; i < 50; i += 1) {
 const DataSet = require('@antv/data-set')
 
 const sourceData = [
-  { item: '家用电器', count: 32.2 },
-  { item: '食用酒水', count: 21 },
-  { item: '个护健康', count: 17 },
-  { item: '服饰箱包', count: 13 },
-  { item: '母婴产品', count: 9 },
-  { item: '其他', count: 7.8 }
+  { item: 'Household appliances', count: 32.2 },
+  { item: 'Sake water', count: 21 },
+  { item: 'Health care', count: 17 },
+  { item: 'Clothing bags', count: 13 },
+  { item: 'Children', count: 9 },
+  { item: 'Other', count: 7.8 }
 ]
 
 const pieScale = [{
