@@ -1,20 +1,20 @@
-多(页签)标签 模式
+Multiple (page) label mode
 ====
 
 
-## 让框架支持打开的页面增加多标签，可随时切换
+## Let the framework support open pages to add multiple tags, you can switch at any time
 
-### 关于如何移除该功能 组件
-  1. 移除 `/src/components/layouts/BasicLayout.vue` L3, L12, L19
+### About how to remove this feature
+  1. Remove `/src/components/layouts/BasicLayout.vue` L3, L12, L19
       ```vue
       <multi-tab v-if="$store.getters.multiTab"></multi-tab>
       ```
-  2. 移除 `/src/config/defaultSettings.js` L25
+  2. Remove `/src/config/defaultSettings.js` L25
 
-  3. 移除 `src/store/modules/app.js` L27, L76-L79, L118-L120
+  3. Remove `src/store/modules/app.js` L27, L76-L79, L118-L120
   
-  4. 移除 `src/utils/mixin.js` L21
+  4. Remove `src/utils/mixin.js` L21
   
-  5. 删除组件目录 `src/components/MultiTab` 
+  5. Delete the component directory `src/components/MultiTab`
 
-> 以上 `L x` 均代表行N ，如 L3 = 行3 
+> Above `L x` represents line N, such as L3 = line 3

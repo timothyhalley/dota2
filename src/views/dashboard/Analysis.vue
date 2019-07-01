@@ -2,48 +2,48 @@
   <div class="page-header-index-wide">
     <a-row :gutter="24">
       <a-col :sm="24" :md="12" :xl="6" :style="{ marginBottom: '24px' }">
-        <chart-card :loading="loading" title="总销售额" total="￥126,560">
-          <a-tooltip title="指标说明" slot="action">
+        <chart-card :loading="loading" title="Total sales" total="$ 126,560">
+          <a-tooltip title="Indicator description" slot="action">
             <a-icon type="info-circle-o" />
           </a-tooltip>
           <div>
             <trend flag="up" style="margin-right: 16px;">
-              <span slot="term">周同比</span>
+              <span slot="term">Week year</span>
               12%
             </trend>
             <trend flag="down">
-              <span slot="term">日同比</span>
+              <span slot="term">Same day</span>
               11%
             </trend>
           </div>
-          <template slot="footer">日均销售额<span>￥ 234.56</span></template>
+          <template slot="footer">Average daily sales<span>$ 234.56</span></template>
         </chart-card>
       </a-col>
       <a-col :sm="24" :md="12" :xl="6" :style="{ marginBottom: '24px' }">
-        <chart-card :loading="loading" title="访问量" :total="8846 | NumberFormat">
-          <a-tooltip title="指标说明" slot="action">
+        <chart-card :loading="loading" title="Views" :total="8846 | NumberFormat">
+          <a-tooltip title="Indicator description" slot="action">
             <a-icon type="info-circle-o" />
           </a-tooltip>
           <div>
             <mini-area />
           </div>
-          <template slot="footer">日访问量<span> {{ '1234' | NumberFormat }}</span></template>
+          <template slot="footer">Daily visits<span> {{ '1234' | NumberFormat }}</span></template>
         </chart-card>
       </a-col>
       <a-col :sm="24" :md="12" :xl="6" :style="{ marginBottom: '24px' }">
-        <chart-card :loading="loading" title="支付笔数" :total="6560 | NumberFormat">
-          <a-tooltip title="指标说明" slot="action">
+        <chart-card :loading="loading" title="Number of payments" :total="6560 | NumberFormat">
+          <a-tooltip title="Indicator description" slot="action">
             <a-icon type="info-circle-o" />
           </a-tooltip>
           <div>
             <mini-bar />
           </div>
-          <template slot="footer">转化率 <span>60%</span></template>
+          <template slot="footer">Conversion rate<span>60%</span></template>
         </chart-card>
       </a-col>
       <a-col :sm="24" :md="12" :xl="6" :style="{ marginBottom: '24px' }">
-        <chart-card :loading="loading" title="运营活动效果" total="78%">
-          <a-tooltip title="指标说明" slot="action">
+        <chart-card :loading="loading" title="Operational activity effect" total="78%">
+          <a-tooltip title="Indicator description" slot="action">
             <a-icon type="info-circle-o" />
           </a-tooltip>
           <div>
@@ -51,11 +51,11 @@
           </div>
           <template slot="footer">
             <trend flag="down" style="margin-right: 16px;">
-              <span slot="term">同周比</span>
+              <span slot="term">Same week</span>
               12%
             </trend>
             <trend flag="up">
-              <span slot="term">日环比</span>
+              <span slot="term">Day to day ratio</span>
               80%
             </trend>
           </template>
@@ -68,30 +68,30 @@
         <a-tabs default-active-key="1" size="large" :tab-bar-style="{marginBottom: '24px', paddingLeft: '16px'}">
           <div class="extra-wrapper" slot="tabBarExtraContent">
             <div class="extra-item">
-              <a>今日</a>
-              <a>本周</a>
-              <a>本月</a>
-              <a>本年</a>
+              <a>Today</a>
+              <a>This week</a>
+              <a>This month</a>
+              <a>This year</a>
             </div>
             <a-range-picker :style="{width: '256px'}" />
           </div>
-          <a-tab-pane loading="true" tab="销售额" key="1">
+          <a-tab-pane loading="true" tab="Sales" key="1">
             <a-row>
               <a-col :xl="16" :lg="12" :md="12" :sm="24" :xs="24">
-                <bar :data="barData" title="销售额排行" />
+                <bar :data="barData" title="Sales ranking" />
               </a-col>
               <a-col :xl="8" :lg="12" :md="12" :sm="24" :xs="24">
-                <rank-list title="门店销售排行榜" :list="rankList"/>
+                <rank-list title="Store sales list" :list="rankList"/>
               </a-col>
             </a-row>
           </a-tab-pane>
-          <a-tab-pane tab="访问量" key="2">
+          <a-tab-pane tab="Views" key="2">
             <a-row>
               <a-col :xl="16" :lg="12" :md="12" :sm="24" :xs="24">
-                <bar :data="barData2" title="销售额趋势" />
+                <bar :data="barData2" title="Sales trend" />
               </a-col>
               <a-col :xl="8" :lg="12" :md="12" :sm="24" :xs="24">
-                <rank-list title="门店销售排行榜" :list="rankList"/>
+                <rank-list title="Store sales list" :list="rankList"/>
               </a-col>
             </a-row>
           </a-tab-pane>
@@ -109,10 +109,10 @@
               </a>
               <a-menu slot="overlay">
                 <a-menu-item>
-                  <a href="javascript:;">操作一</a>
+                  <a href="javascript:;">Operation one</a>
                 </a-menu-item>
                 <a-menu-item>
-                  <a href="javascript:;">操作二</a>
+                  <a href="javascript:;">Operation two</a>
                 </a-menu-item>
               </a-menu>
             </a-dropdown>
@@ -120,8 +120,8 @@
               <a-col :xs="24" :sm="12" :style="{ marginBottom: ' 24px'}">
                 <number-info :total="12321" :sub-total="17.1">
                   <span slot="subtitle">
-                    <span>搜索用户数</span>
-                    <a-tooltip title="指标说明" slot="action">
+                    <span>Number of search users</span>
+                    <a-tooltip title="Indicator description" slot="action">
                       <a-icon type="info-circle-o" :style="{ marginLeft: '8px' }" />
                     </a-tooltip>
                   </span>
@@ -134,8 +134,8 @@
               <a-col :xs="24" :sm="12" :style="{ marginBottom: ' 24px'}">
                 <number-info :total="2.7" :sub-total="26.2" status="down">
                   <span slot="subtitle">
-                    <span>人均搜索次数</span>
-                    <a-tooltip title="指标说明" slot="action">
+                    <span>Searches per capita</span>
+                    <a-tooltip title="Indicator description" slot="action">
                       <a-icon type="info-circle-o" :style="{ marginLeft: '8px' }" />
                     </a-tooltip>
                   </span>
@@ -164,7 +164,7 @@
           </a-card>
         </a-col>
         <a-col :xl="12" :lg="24" :md="24" :sm="24" :xs="24">
-          <a-card class="antd-pro-pages-dashboard-analysis-salesCard" :loading="loading" :bordered="false" title="销售额类别占比" :style="{ marginTop: '24px', minHeight: '500px' }">
+          <a-card class="antd-pro-pages-dashboard-analysis-salesCard" :loading="loading" :bordered="false" title="Sales category" :style="{ marginTop: '24px', minHeight: '500px' }">
             <div slot="extra" style="height: inherit;">
               <!-- style="bottom: 12px;display: inline-block;" -->
               <span class="dashboard-analysis-iconGroup">
@@ -172,24 +172,24 @@
                   <a-icon type="ellipsis" class="ant-dropdown-link" />
                   <a-menu slot="overlay">
                     <a-menu-item>
-                      <a href="javascript:;">操作一</a>
+                      <a href="javascript:;">Operation one</a>
                     </a-menu-item>
                     <a-menu-item>
-                      <a href="javascript:;">操作二</a>
+                      <a href="javascript:;">Operation two</a>
                     </a-menu-item>
                   </a-menu>
                 </a-dropdown>
               </span>
               <div class="analysis-salesTypeRadio">
                 <a-radio-group defaultValue="a">
-                  <a-radio-button value="a">全部渠道</a-radio-button>
-                  <a-radio-button value="b">线上</a-radio-button>
-                  <a-radio-button value="c">门店</a-radio-button>
+                  <a-radio-button value="a">All channels</a-radio-button>
+                  <a-radio-button value="b">On-line</a-radio-button>
+                  <a-radio-button value="c">Store</a-radio-button>
                 </a-radio-group>
               </div>
 
             </div>
-            <h4>销售额</h4>
+            <h4>Sales</h4>
             <div>
               <!-- style="width: calc(100% - 240px);" -->
               <div>
@@ -216,9 +216,26 @@ import moment from 'moment'
 import { ChartCard, MiniArea, MiniBar, MiniProgress, RankList, Bar, Trend, NumberInfo, MiniSmoothArea } from '@/components'
 import { mixinDevice } from '@/utils/mixin'
 
+const thing1 =
+  [
+    'AL',
+    'NM',
+    'PA',
+    'CO',
+    'VT',
+    'WA',
+    'WY',
+    'KY',
+    'AK',
+    'OR',
+    'UT',
+    'MT'
+  ];
+
 const barData = []
 const barData2 = []
 for (let i = 0; i < 12; i += 1) {
+  const stateloc = thing1[i]
   barData.push({
     x: `${i + 1}月`,
     y: Math.floor(Math.random() * 1000) + 200

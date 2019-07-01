@@ -1,31 +1,29 @@
-为首屏增加 加载动画
+Add loading animation for the first screen
 ====
 
 
+## demand
 
-## 需求
-
-> 为了缓解用户第一次访问时，加载 JS 过大所导致用户等待白屏时间过长导致的用户体验不好，进行的一个优化动效。
-
+> In order to alleviate the user's first visit, the JS is too large, causing the user to wait for the white screen for too long and the user experience is not good, and an optimization effect is performed.
 
 
-## 实现方案
 
-1. 将 动画加载 dom 元素放在 #app 内，Vue 生命周期开始时，会自动清掉 #app 下的所有元素。
-2. 将 动画加载 dom 元素放在 body 下，Vue 生命周期开始时 App.vue (created, mounted) 调用 `@/utils/utll` 下的 removeLoadingAnimate(#id, timeout) 则会移除加载动画
+## Implementation plan
 
-最后一步：
-​	将样式插入到 `public/index.html` 文件的 `<head></head>` 最好写成内联 `<style>动画样式</style>` 
+1. Place the animation loading dom element inside #app, and automatically remove all elements under #app at the beginning of the Vue life cycle.
+2. Place the animation loading dom element under the body. At the beginning of the Vue life cycle, App.vue (created, mounted) calls removeLoadingAnimate(#id, timeout) under `@/utils/utll` to remove the loading animation.
+
+last step:
+Insert the style into the `public/index.html` file ``head></head>` is best written as inline `<style> animated style</style>`
 
 
 
 ----
 
-目前提供有两个样式，均在 `public/loading` 文件夹内。且 pro 已经默认使用了一套 loading 动画方案，可以直接参考 `public/index.html`
+There are currently two styles available, both in the `public/loading` folder. And pro has used a set of loading animation scheme by default, you can directly refer to `public/index.html`
 
+##Write at the end
 
-## 写在最后
+Currently pro has a page overflow showing the browser scroll bar, the page will shake the question.
 
-目前 pro 有页面 overflow 显示出浏览器滚动条时，页面会抖动一下的问题。
-
-欢迎各位提供能解决的方案和实现 demo。如果在条件允许的情况下，建议请直接使用 pro 进行改造，也欢迎直接 PR 到 pro 的仓库
+You are welcome to provide solutions and implementation demos. If possible, please use pro to modify it if possible, and also welcome to PR directly to pro's warehouse.
