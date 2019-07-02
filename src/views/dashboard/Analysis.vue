@@ -216,22 +216,6 @@ import moment from 'moment'
 import { ChartCard, MiniArea, MiniBar, MiniProgress, RankList, Bar, Trend, NumberInfo, MiniSmoothArea } from '@/components'
 import { mixinDevice } from '@/utils/mixin'
 
-const usaStates =
-  [
-    'AL',
-    'NM',
-    'PA',
-    'CO',
-    'VT',
-    'WA',
-    'WY',
-    'KY',
-    'AK',
-    'OR',
-    'UT',
-    'MT'
-  ]
-
 const usaMonths =
   [
     'JAN',

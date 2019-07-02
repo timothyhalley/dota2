@@ -32,18 +32,18 @@ router.beforeEach((to, from, next) => {
               router.addRoutes(store.getters.addRouters)
               const redirect = decodeURIComponent(from.query.redirect || to.path)
               if (to.path === redirect) {
-                // hack方法 确保addRoutes已完成 ,set the replace: true so the navigation will not leave a history record
+                // Hack method to ensure that addRoutes is complete, set the replace: true so the navigation will not leave a history record
                 next({ ...to, replace: true })
               } else {
-                // 跳转到目的路由
+                // Jump to destination route
                 next({ path: redirect })
               }
             })
           })
           .catch(() => {
             notification.error({
-              message: '错误',
-              description: '请求用户信息失败，请重试'
+              message: 'error',
+              description: 'Requesting user information failed, please try again'
             })
             store.dispatch('Logout').then(() => {
               next({ path: '/user/login', query: { redirect: to.fullPath } })
@@ -55,7 +55,7 @@ router.beforeEach((to, from, next) => {
     }
   } else {
     if (whiteList.includes(to.name)) {
-      // 在免登录白名单，直接进入
+      // In the free login whitelist, go directly
       next()
     } else {
       next({ path: '/user/login', query: { redirect: to.fullPath } })

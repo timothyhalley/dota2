@@ -47,7 +47,7 @@ const user = {
       })
     },
 
-    // 获取用户信息
+    // Get user information
     GetInfo ({ commit }) {
       return new Promise((resolve, reject) => {
         getInfo().then(response => {
@@ -79,7 +79,7 @@ const user = {
       })
     },
 
-    // 登出
+    // Sign out
     Logout ({ commit, state }) {
       return new Promise((resolve) => {
         commit('SET_TOKEN', '')

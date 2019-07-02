@@ -179,11 +179,11 @@ Example 2
     },
     methods: {
       edit(row) {
-        // axios 发送数据到后端 修改数据成功后
-        // 调用 refresh() 重新加载列表数据
-        // 这里 setTimeout 模拟发起请求的网络延迟..
+        // axios Send data to the backend After modifying the data successfully
+        // transfer refresh() Reload list data
+        // Here setTimeout Simulate network delay for initiating a request..
         setTimeout(() => {
-          this.$refs.table.refresh() // refresh() 不传参默认值 false 不刷新到分页第一页
+          this.$refs.table.refresh() // refresh() Do not pass the default value false, do not refresh to the first page页
         }, 1500)
 
       }
@@ -254,7 +254,7 @@ result.then(r => {
     return
   }
 
-  // This is used to determine if the interface has a return r.totalCount 或 this.showPagination = false
+  // This is used to determine if the interface has a return r.totalCount or this.showPagination = false
   // When the situation is satisfied, it means that the data does not meet the paging size, and the table paging function is turned off.
   !r.totalCount && ['auto', false].includes(this.showPagination) && (this.localPagination = false)
   this.localDataSource = r.data // Return the array data in the result
