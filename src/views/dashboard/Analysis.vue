@@ -366,7 +366,7 @@ export default {
       loading: true,
       rankList,
 
-      // 搜索用户数
+      // Number of search users
       searchUserData,
       searchUserScale,
       searchTableColumns,

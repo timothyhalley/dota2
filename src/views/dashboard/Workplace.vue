@@ -83,7 +83,7 @@
               <a>Four</a>
               <a>Five</a>
               <a>Six</a>
-              <a-button size="small" type="primary" ghost icon="plus">Add to</a-button>
+              <a-button @click="addToLog()" size="small" type="primary" ghost icon="plus">Add to</a-button>
             </div>
           </a-card>
           <a-card title="XX Index" style="margin-bottom: 24px" :loading="radarLoading" :bordered="false" :body-style="{ padding: 0 }">
@@ -230,6 +230,9 @@ export default {
           this.radarData = dv.rows
           this.radarLoading = false
         })
+    },
+    addToLog () {
+      console.log('what the hell is going on here!!!')
     }
   }
 }

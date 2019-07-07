@@ -30,7 +30,7 @@ export default {
     <avatar-list-item tips="Vitx" src="https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/001/123/landscape/electronlogo.png" />
 </avatar-list>
 ```
-或
+or
 ```html
 <avatar-list :max-length="3">
     <avatar-list-item tips="Jake" src="https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/000/002/landscape/angularjs.png" />

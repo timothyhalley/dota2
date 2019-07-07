@@ -92,7 +92,7 @@ export default {
   },
   computed: {
     ...mapState({
-      // 动态主路由
+      // Dynamic primary route
       mainMenu: state => state.permission.addRouters
     }),
     contentPaddingLeft () {

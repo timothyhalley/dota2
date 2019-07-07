@@ -1,10 +1,10 @@
-# Ellipsis 文本自动省略号
+# Ellipsis Text automatic ellipsis
 
-文本过长自动处理省略号，支持按照文本长度和最大行数两种方式截取。
+The text is too long to automatically process the ellipsis, and supports interception according to the length of the text and the maximum number of lines.
 
 
 
-引用方式：
+Reference method:
 
 ```javascript
 import Ellipsis from '@/components/Ellipsis'
@@ -18,12 +18,12 @@ export default {
 
 
 
-## 代码演示  [demo](https://pro.loacg.com/test/home)
+## Code demo  [demo](https://pro.loacg.com/test/home)
 
 ```html
 <ellipsis :length="100" tooltip>
-        There were injuries alleged in three cases in 2015, and a
-        fourth incident in September, according to the safety recall report. After meeting with US regulators in October, the firm decided to issue a voluntary recall.
+        The Microsoft co-founder marveled at how Jobs could mesmerize his staff.
+        Jobs was a singular case and it would be hard to replicate his style successfully, Gates says.
 </ellipsis>
 ```
 
@@ -32,7 +32,7 @@ export default {
 ## API
 
 
-参数 | 说明 | 类型 | 默认值
-----|------|-----|------
-tooltip | 移动到文本展示完整内容的提示 | boolean | -
-length | 在按照长度截取下的文本最大字符数，超过则截取省略 | number | -
+Parameters | Description | Type | Default
+-----------|-------------|------|------
+Tooltip | Tips for moving to text to display full content | boolean | -
+Length | The maximum number of characters in the text intercepted by length, if it is exceeded, the interception is omitted | number | -
