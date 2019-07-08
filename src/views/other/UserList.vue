@@ -4,23 +4,23 @@
       <a-form layout="inline">
         <a-row :gutter="48">
           <a-col :md="8" :sm="24">
-            <a-form-item label="角色ID">
-              <a-input placeholder="请输入"/>
+            <a-form-item label="Role ID">
+              <a-input placeholder="Please enter"/>
             </a-form-item>
           </a-col>
           <a-col :md="8" :sm="24">
-            <a-form-item label="状态">
-              <a-select placeholder="请选择" default-value="0">
-                <a-select-option value="0">全部</a-select-option>
-                <a-select-option value="1">关闭</a-select-option>
-                <a-select-option value="2">运行中</a-select-option>
+            <a-form-item label="Status">
+              <a-select placeholder="Please choose" default-value="0">
+                <a-select-option value="0">All</a-select-option>
+                <a-select-option value="1">Shut down</a-select-option>
+                <a-select-option value="2">Running</a-select-option>
               </a-select>
             </a-form-item>
           </a-col>
           <a-col :md="8" :sm="24">
             <span class="table-page-search-submitButtons">
-              <a-button type="primary">查询</a-button>
-              <a-button style="margin-left: 8px">重置</a-button>
+              <a-button type="primary">Inquire</a-button>
+              <a-button style="margin-left: 8px">Reset</a-button>
             </span>
           </a-col>
         </a-row>
@@ -51,21 +51,21 @@
         </a-row>
       </div>
       <span slot="action" slot-scope="text, record">
-        <a @click="handleEdit(record)">编辑</a>
+        <a @click="handleEdit(record)">Edit</a>
         <a-divider type="vertical" />
         <a-dropdown>
           <a class="ant-dropdown-link">
-            更多 <a-icon type="down" />
+            More <a-icon type="down" />
           </a>
           <a-menu slot="overlay">
             <a-menu-item>
-              <a href="javascript:;">详情</a>
+              <a href="javascript:;">Details</a>
             </a-menu-item>
             <a-menu-item>
-              <a href="javascript:;">禁用</a>
+              <a href="javascript:;">Disable</a>
             </a-menu-item>
             <a-menu-item>
-              <a href="javascript:;">删除</a>
+              <a href="javascript:;">Delete</a>
             </a-menu-item>
           </a-menu>
         </a-dropdown>
@@ -73,7 +73,7 @@
     </s-table>
 
     <a-modal
-      title="操作"
+      title="Operating"
       style="top: 20px;"
       :width="800"
       v-model="visible"
@@ -84,21 +84,21 @@
         <a-form-item
           :labelCol="labelCol"
           :wrapperCol="wrapperCol"
-          label="唯一识别码"
+          label="Unique identification code"
           hasFeedback
           validateStatus="success"
         >
-          <a-input placeholder="唯一识别码" v-model="mdl.id" id="no" disabled="disabled" />
+          <a-input placeholder="Unique identification code" v-model="mdl.id" id="no" disabled="disabled" />
         </a-form-item>
 
         <a-form-item
           :labelCol="labelCol"
           :wrapperCol="wrapperCol"
-          label="角色名称"
+          label="Role name"
           hasFeedback
           validateStatus="success"
         >
-          <a-input placeholder="起一个名字" v-model="mdl.name" id="role_name" />
+          <a-input placeholder="Start a name" v-model="mdl.name" id="role_name" />
         </a-form-item>
 
         <a-form-item
@@ -109,15 +109,15 @@
           validateStatus="warning"
         >
           <a-select v-model="mdl.status">
-            <a-select-option value="1">正常</a-select-option>
-            <a-select-option value="2">禁用</a-select-option>
+            <a-select-option value="1">Normal</a-select-option>
+            <a-select-option value="2">Disable</a-select-option>
           </a-select>
         </a-form-item>
 
         <a-form-item
           :labelCol="labelCol"
           :wrapperCol="wrapperCol"
-          label="描述"
+          label="Status"
           hasFeedback
         >
           <a-textarea :rows="5" v-model="mdl.describe" placeholder="..." id="describe"/>
@@ -128,7 +128,7 @@
         <a-form-item
           :labelCol="labelCol"
           :wrapperCol="wrapperCol"
-          label="拥有权限"
+          label="Have access"
           hasFeedback
         >
           <a-row :gutter="16" v-for="(permission, index) in mdl.permissions" :key="index">
@@ -159,7 +159,7 @@ export default {
   },
   data () {
     return {
-      description: '列表使用场景：后台管理中的权限管理以及角色管理，可用于基于 RBAC 设计的角色权限控制，颗粒度细到每一个操作类型。',
+      description: 'List usage scenarios: rights management in background management and role management, which can be used for role permission control based on RBAC design, granular to each type of operation. ',
 
       visible: false,
       labelCol: {
@@ -180,29 +180,29 @@ export default {
       // 表头
       columns: [
         {
-          title: '唯一识别码',
+          title: 'Unique identification code',
           dataIndex: 'id'
         },
         {
-          title: '角色名称',
+          title: 'Role Name',
           dataIndex: 'name'
         },
         {
-          title: '状态',
+          title: 'Status',
           dataIndex: 'status'
         },
         {
-          title: '创建时间',
+          title: 'Creation time',
           dataIndex: 'createTime',
           sorter: true
         }, {
-          title: '操作',
+          title: 'Operating',
           width: '150px',
           dataIndex: 'action',
           scopedSlots: { customRender: 'action' }
         }
       ],
-      // 加载数据方法 必须为 Promise 对象
+      // The method of loading data must be a Promise object
       loadData: parameter => {
         return getRoleList(parameter)
           .then(res => {
