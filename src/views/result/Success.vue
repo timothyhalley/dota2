@@ -2,56 +2,56 @@
   <a-card :bordered="false" style="margin: -24px -24px 0px;">
     <result type="success" :description="description" :title="title">
       <template slot="action">
-        <a-button type="primary">返回列表</a-button>
-        <a-button style="margin-left: 8px">查看项目</a-button>
-        <a-button style="margin-left: 8px">打印</a-button>
+        <a-button type="primary">Back to list</a-button>
+        <a-button style="margin-left: 8px">View project</a-button>
+        <a-button style="margin-left: 8px">Print</a-button>
       </template>
       <div>
-        <div style="font-size: 16px; color: rgba(0, 0, 0, 0.85); font-weight: 500; margin-bottom: 20px;">项目名称</div>
+        <div style="font-size: 16px; color: rgba(0, 0, 0, 0.85); font-weight: 500; margin-bottom: 20px;">Project name</div>
         <a-row style="margin-bottom: 16px">
           <a-col :xs="24" :sm="12" :md="12" :lg="12" :xl="6">
-            <span style="color: rgba(0, 0, 0, 0.85)">项目 ID：</span>
+            <span style="color: rgba(0, 0, 0, 0.85)">Project ID：</span>
             20180724089
           </a-col>
           <a-col :xs="24" :sm="12" :md="12" :lg="12" :xl="6">
-            <span style="color: rgba(0, 0, 0, 0.85)">负责人：</span>
-            曲丽丽是谁？
+            <span style="color: rgba(0, 0, 0, 0.85)">Principal: </span>
+            Who is Edmund Halley?
           </a-col>
           <a-col :xs="24" :sm="24" :md="24" :lg="24" :xl="12">
-            <span style="color: rgba(0, 0, 0, 0.85)">生效时间：</span>
-            2016-12-12 ~ 2017-12-12
+            <span style="color: rgba(0, 0, 0, 0.85)">Effective time: </span>
+            2019-12-12 ~ 2020-12-12
           </a-col>
         </a-row>
         <a-steps :current="1" :direction="isMobile() && directionType.vertical || directionType.horizontal" progressDot>
           <a-step >
-            <span style="font-size: 14px" slot="title">创建项目</span>
+            <span style="font-size: 14px" slot="title">Create project</span>
             <template slot="description">
               <div style="fontSize: 12px; color: rgba(0, 0, 0, 0.45); position: relative; left: 42px;text-align: left;" slot="description" >
                 <div style="margin: 8px 0 4px">
-                  曲丽丽
+                  Edmund Halley
                   <a-icon style="margin-left: 8px" type="dingding-o" />
                 </div>
-                <div>2016-12-12 12:32</div>
+                <div>2019-12-12 12:32</div>
               </div>
             </template>
           </a-step>
-          <a-step title="部门初审">
-            <span style="font-size: 14px" slot="title">部门初审</span>
+          <a-step title="Departmental preliminary review">
+            <span style="font-size: 14px" slot="title">Departmental preliminary review</span>
             <template slot="description">
               <div style="fontSize: 12px; color: rgba(0, 0, 0, 0.45); position: relative; left: 42px;text-align: left;" slot="description" >
                 <div style="margin: 8px 0 4px">
-                  周毛毛
+                  Isaac Newton
                   <a-icon style="margin-left: 8px; color: #00A0E9" type="dingding-o" />
                 </div>
-                <div><a href="">催一下</a></div>
+                <div><a href="">Urge</a></div>
               </div>
             </template>
           </a-step>
-          <a-step title="财务复核">
-            <span style="font-size: 14px" slot="title">财务复核</span>
+          <a-step title="Financial review">
+            <span style="font-size: 14px" slot="title">Financial review</span>
           </a-step>
-          <a-step title="完成" >
-            <span style="font-size: 14px" slot="title">完成</span>
+          <a-step title="Carry out" >
+            <span style="font-size: 14px" slot="title">Carry out</span>
           </a-step>
         </a-steps>
       </div>
@@ -77,10 +77,10 @@ export default {
   data () {
     return {
       title: '提交成功',
-      description: '提交结果页用于反馈一系列操作任务的处理结果，\n' +
-          ' 如果仅是简单操作，使用 Message 全局提示反馈即可。\n' +
-          ' 本文字区域可以展示简单的补充说明，如果有类似展示\n' +
-          ' “单据”的需求，下面这个灰色区域可以呈现比较复杂的内容。',
+      description: 'The submission result page is used to feed back the processing results of a series of operational tasks. \n' +
+          ' If its just a simple operation, use the Message global hint feedback. \n' +
+          ' his text area can show simple supplementary instructions if there is a similar display\n' +
+          ' “Document” The demand, the gray area below can present more complex content.',
       directionType
     }
   }
