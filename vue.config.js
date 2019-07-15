@@ -13,12 +13,12 @@ module.exports = {
     plugins: [
       // Ignore all locale files of moment.js
       new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
-      // 生成仅包含颜色的替换样式（主题色等）
-      // TODO 需要增加根据环境不开启主题需求
+      // Generate a replacement style that contains only colors (themes, etc.)
+      // TODO Need to increase the need to open the theme according to the environment
       new ThemeColorReplacer({
-        fileName: 'css/theme-colors.css', // TODO 需要处理的暗坑
-        matchColors: getAntdSerials('#1890ff'), // 主色系列
-        // 改变样式选择器，解决样式覆盖问题
+        fileName: 'css/theme-colors.css', // TODO Dark pit to be processed
+        matchColors: getAntdSerials('#1890ff'), // Main color series
+        // Change the style selector to solve the style coverage problem
         changeSelector (selector) {
           switch (selector) {
             case '.ant-calendar-today .ant-calendar-date':
@@ -76,7 +76,7 @@ module.exports = {
     loaderOptions: {
       less: {
         modifyVars: {
-          /* less 变量覆盖，用于自定义 ant design 主题 */
+          /* less Variable override for custom ant design themes */
 
           /*
           'primary-color': '#F5222D',
@@ -91,15 +91,14 @@ module.exports = {
 
   devServer: {
     // development server port 8000
-    port: 8000
-    // proxy: {
-    //   '/api': {
-    //     // target: 'https://mock.ihx.me/mock/5baf3052f7da7e07e04a5116/antd-pro',
-    //     target: 'https://mock.ihx.me/mock/5baf3052f7da7e07e04a5116/antd-pro',
-    //     ws: false,
-    //     changeOrigin: true
-    //   }
-    // }
+    // port: 8000
+    proxy: {
+      '/api': {
+        target: 'https://jsonplaceholder.typicode.com',
+        ws: false,
+        changeOrigin: true
+      }
+    }
   },
 
   // disable source map in production
@@ -110,7 +109,7 @@ module.exports = {
 }
 
 function getAntdSerials (color) {
-  // 淡化（即less的tint）
+  // Fade (ie less tint)
   const lightens = new Array(9).fill().map((t, i) => {
     return ThemeColorReplacer.varyColor.lighten(color, i / 10)
   })

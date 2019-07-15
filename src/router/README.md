@@ -1,22 +1,22 @@
-路由/菜单说明
+Routing / menu description
 ====
 
 
 
-配置文件路径
+Configuration file path
 ----
 
 `@/config/router.config.js`
 
 
 
-格式和说明
+Format and description
 ----
 
 ```javascript
 /**
- * 路由配置说明：
- * 建议：sider menu 请不要超过三级菜单，若超过三级菜单，则应该设计为顶部主菜单 配合左侧次级菜单
+ * Routing configuration instructions:
+ * Suggestion: The side menu should not exceed the third level menu. If it exceeds the third level menu, it should be designed as the top main menu.
  *
  **/
  {
@@ -34,7 +34,7 @@
 
 
 
-`{ Route }` 对象
+`{ Route }` Object
 
 | 参数     | 说明                                      | 类型    | 默认值 |
 | -------- | ----------------------------------------- | ------- | ------ |
@@ -45,7 +45,7 @@
 | hideChildrenInMenu | 强制菜单显示为Item而不是SubItem(配合 meta.hidden) | boolean  | -   |
 
 
-`{ Meta }` 路由元信息对象
+`{ Meta }` Routing meta information object
 
 | 参数                | 说明                                                         | 类型    | 默认值 |
 | ------------------- | ------------------------------------------------------------ | ------- | ------ |
@@ -58,7 +58,7 @@
 
 > 路由自定义 `Icon` 请引入自定义 `svg` Icon 文件，然后传递给路由的 `meta.icon` 参数即可
 
-路由例子
+Routing example
 ----
 
 ```ecmascript 6
@@ -67,7 +67,7 @@ const asyncRouterMap = [
     path: '/',
     name: 'index',
     component: BasicLayout,
-    meta: { title: '首页' },
+    meta: { title: 'Home' },
     redirect: '/dashboard/analysis',
     children: [
       {
@@ -75,7 +75,7 @@ const asyncRouterMap = [
         component: Layout,
         name: 'dashboard',
         redirect: '/dashboard/workplace',
-        meta: {title: '仪表盘', icon: 'dashboard', permission: ['dashboard']},
+        meta: {title: 'Dash board', icon: 'dashboard', permission: ['dashboard']},
         children: [
           {
             path: '/dashboard/analysis',
@@ -129,12 +129,12 @@ const asyncRouterMap = [
 ]
 ```
 
-> 1. 请注意 `component: () => import('..') ` 方式引入路由的页面组件为 懒加载模式。具体可以看 [Vue 官方文档](https://router.vuejs.org/zh/guide/advanced/lazy-loading.html)
-> 2. 增加新的路由应该增加在 '/' (index) 路由的 `children` 内
-> 3. `permission` 可以进行自定义修改，只需要对这个模块进行自定义修改即可 [src/store/modules/permission.js#L10](https://github.com/sendya/ant-design-pro-vue/blob/master/src/store/modules/permission.js#L10)
+> 1. Please note `component: () => import('..') ` The page component that imports routing is lazy loading mode. Specific can see [Vue Official document](https://router.vuejs.org/zh/guide/advanced/lazy-loading.html)
+> 2. Adding new routes should increase in '/' (index) Routed `children` Inside
+> 3. `permission` Custom modifications can be made, only need to modify the module to customize [src/store/modules/permission.js#L10](https://github.com/sendya/ant-design-pro-vue/blob/master/src/store/modules/permission.js#L10)
 
 
 
-附权限路由结构：
+With permission routing structure:
 
-![权限结构](https://static-2.loacg.com/open/static/github/permissions.png)
+![Authority structure](https://static-2.loacg.com/open/static/github/permissions.png)

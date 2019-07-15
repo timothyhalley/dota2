@@ -1,7 +1,7 @@
 export function timeFix () {
   const time = new Date()
   const hour = time.getHours()
-  return hour < 9 ? 'Good morning' : hour <= 11 ? 'Good morning' : hour <= 13 ? 'Good afternoon' : hour < 20 ? 'Good happy hour' : 'Good evening'
+  return hour < 9 ? 'Good morning' : hour <= 11 ? 'Good morning' : hour <= 13 ? 'Good afternoon' : hour < 20 ? 'Its happy hour time' : 'Good evening'
 }
 
 export function welcome () {
@@ -11,7 +11,7 @@ export function welcome () {
 }
 
 /**
- * 触发 window.resize
+ * Trigger window.resize
  */
 export function triggerWindowResizeEvent () {
   const event = document.createEvent('HTMLEvents')
