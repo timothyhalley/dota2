@@ -10,12 +10,12 @@
       <div class="setting-drawer-index-content">
 
         <div :style="{ marginBottom: '24px' }">
-          <h3 class="setting-drawer-index-title">整体风格设置</h3>
+          <h3 class="setting-drawer-index-title">Overall style setting</h3>
 
           <div class="setting-drawer-index-blockChecbox">
             <a-tooltip>
               <template slot="title">
-                暗色菜单风格
+                Dark menu style
               </template>
               <div class="setting-drawer-index-item" @click="handleMenuTheme('dark')">
                 <img src="https://gw.alipayobjects.com/zos/rmsportal/LCkqqYNmvBEbokSDscrm.svg" alt="dark">
@@ -27,7 +27,7 @@
 
             <a-tooltip>
               <template slot="title">
-                亮色菜单风格
+                Bright menu style
               </template>
               <div class="setting-drawer-index-item" @click="handleMenuTheme('light')">
                 <img src="https://gw.alipayobjects.com/zos/rmsportal/jpRkZQMyYRryryPNtyIC.svg" alt="light">
@@ -62,7 +62,7 @@
           <div class="setting-drawer-index-blockChecbox">
             <a-tooltip>
               <template slot="title">
-                侧边栏导航
+                Sidebar navigation
               </template>
               <div class="setting-drawer-index-item" @click="handleLayout('sidemenu')">
                 <img src="https://gw.alipayobjects.com/zos/rmsportal/JopDzEhOqwOjeNTXkoje.svg" alt="sidemenu">
@@ -74,7 +74,7 @@
 
             <a-tooltip>
               <template slot="title">
-                顶部栏导航
+                Top bar navigation
               </template>
               <div class="setting-drawer-index-item" @click="handleLayout('topmenu')">
                 <img src="https://gw.alipayobjects.com/zos/rmsportal/KDNDBbriJhLwuqMoxcAr.svg" alt="topmenu">
@@ -89,36 +89,36 @@
               <a-list-item>
                 <a-tooltip slot="actions">
                   <template slot="title">
-                    该设定仅 [顶部栏导航] 时有效
+                    This setting is valid only when [Top Bar Navigation]
                   </template>
                   <a-select size="small" style="width: 80px;" :defaultValue="contentWidth" @change="handleContentWidthChange">
-                    <a-select-option value="Fixed">固定</a-select-option>
-                    <a-select-option value="Fluid" v-if="layoutMode !== 'sidemenu'">流式</a-select-option>
+                    <a-select-option value="Fixed">Fixed</a-select-option>
+                    <a-select-option value="Fluid" v-if="layoutMode !== 'sidemenu'">Streaming</a-select-option>
                   </a-select>
                 </a-tooltip>
                 <a-list-item-meta>
-                  <div slot="title">内容区域宽度</div>
+                  <div slot="title">Content area width</div>
                 </a-list-item-meta>
               </a-list-item>
               <a-list-item>
                 <a-switch slot="actions" size="small" :defaultChecked="fixedHeader" @change="handleFixedHeader" />
                 <a-list-item-meta>
-                  <div slot="title">固定 Header</div>
+                  <div slot="title">Fixed Header</div>
                 </a-list-item-meta>
               </a-list-item>
               <a-list-item>
                 <a-switch slot="actions" size="small" :disabled="!fixedHeader" :defaultChecked="autoHideHeader" @change="handleFixedHeaderHidden" />
                 <a-list-item-meta>
                   <a-tooltip slot="title" placement="left">
-                    <template slot="title">固定 Header 时可配置</template>
-                    <div :style="{ opacity: !fixedHeader ? '0.5' : '1' }">下滑时隐藏 Header</div>
+                    <template slot="title">Fixed Header Configurable</template>
+                    <div :style="{ opacity: !fixedHeader ? '0.5' : '1' }">Hidden when falling Header</div>
                   </a-tooltip>
                 </a-list-item-meta>
               </a-list-item>
               <a-list-item >
                 <a-switch slot="actions" size="small" :disabled="(layoutMode === 'topmenu')" :defaultChecked="fixSiderbar" @change="handleFixSiderbar" />
                 <a-list-item-meta>
-                  <div slot="title" :style="{ textDecoration: layoutMode === 'topmenu' ? 'line-through' : 'unset' }">固定侧边菜单</div>
+                  <div slot="title" :style="{ textDecoration: layoutMode === 'topmenu' ? 'line-through' : 'unset' }">Fixed side menu</div>
                 </a-list-item-meta>
               </a-list-item>
             </a-list>
@@ -127,19 +127,19 @@
         <a-divider />
 
         <div :style="{ marginBottom: '24px' }">
-          <h3 class="setting-drawer-index-title">其他设置</h3>
+          <h3 class="setting-drawer-index-title">Other settings</h3>
           <div>
             <a-list :split="false">
               <a-list-item>
                 <a-switch slot="actions" size="small" :defaultChecked="colorWeak" @change="onColorWeak" />
                 <a-list-item-meta>
-                  <div slot="title">色弱模式</div>
+                  <div slot="title">Weak mode</div>
                 </a-list-item-meta>
               </a-list-item>
               <a-list-item>
                 <a-switch slot="actions" size="small" :defaultChecked="multiTab" @change="onMultiTab" />
                 <a-list-item-meta>
-                  <div slot="title">多页签模式</div>
+                  <div slot="title">Multi-page mode</div>
                 </a-list-item-meta>
               </a-list-item>
             </a-list>
@@ -151,10 +151,10 @@
             @click="doCopy"
             icon="copy"
             block
-          >拷贝设置</a-button>
+          >Copy settings</a-button>
           <a-alert type="warning" :style="{ marginTop: '24px' }">
             <span slot="message">
-              配置栏只在开发环境用于预览，生产环境不会展现，请手动修改配置文件
+              The configuration bar is only used in the development environment for preview, the production environment will not be displayed, please manually modify the configuration file.
               <a href="https://github.com/sendya/ant-design-pro-vue/blob/master/src/config/defaultSettings.js" target="_blank">src/config/defaultSettings.js</a>
             </span>
           </a-alert>
@@ -242,15 +242,15 @@ export default {
 }`
       this.$copyText(text).then(message => {
         console.log('copy', message)
-        this.$message.success('复制完毕')
+        this.$message.success('Copy completed')
       }).catch(err => {
         console.log('copy.err', err)
-        this.$message.error('复制失败')
+        this.$message.error('Replication failed')
       })
     },
     handleLayout (mode) {
       this.$store.dispatch('ToggleLayoutMode', mode)
-      // 因为顶部菜单不能固定左侧菜单栏，所以强制关闭
+      // Forced to close because the top menu cannot fix the left menu bar
       this.handleFixSiderbar(false)
     },
     handleContentWidthChange (type) {

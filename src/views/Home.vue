@@ -7,37 +7,37 @@
 
     <br/>
 
-    <h2># Trend 组件 </h2>
+    <h2># Trend Component </h2>
 
-    <a-divider> 正常 </a-divider>
+    <a-divider> Normal </a-divider>
 
     <a-card>
 
       <trend flag="up" style="margin-right: 16px;">
-        <span slot="term">工资</span>
+        <span slot="term">Wage</span>
         5%
       </trend>
       <trend flag="up" style="margin-right: 16px;">
-        <span slot="term">工作量</span>
+        <span slot="term">Workload</span>
         50%
       </trend>
       <trend flag="down">
-        <span slot="term">身体状态</span>
+        <span slot="term">Body condition</span>
         50%
       </trend>
 
     </a-card>
 
-    <a-divider> 颜色反转 </a-divider>
+    <a-divider> Color reversal </a-divider>
 
     <a-card style="margin-bottom: 3rem">
 
       <trend flag="up" :reverse-color="true" style="margin-right: 16px;">
-        <span slot="term">工资</span>
+        <span slot="term">Wage</span>
         5%
       </trend>
       <trend flag="down" :reverse-color="true" style="margin-right: 16px;">
-        <span slot="term">工作量</span>
+        <span slot="term">Workload</span>
         50%
       </trend>
 
@@ -67,7 +67,7 @@
       </avatar-list>
     </a-card>
 
-    <h2># CountDown 组件 </h2>
+    <h2># CountDown Component </h2>
 
     <a-divider> CountDown </a-divider>
     <a-card style="margin-bottom: 3rem">
@@ -86,7 +86,7 @@
       </count-down>
     </a-card>
 
-    <h2># Ellipsis 组件 </h2>
+    <h2># Ellipsis Component </h2>
 
     <a-divider> Ellipsis </a-divider>
     <a-card style="margin-bottom: 3rem">
@@ -96,7 +96,7 @@
       </ellipsis>
     </a-card>
 
-    <h2># NumberInfo 组件 </h2>
+    <h2># NumberInfo Component </h2>
 
     <a-divider> NumberInfo </a-divider>
     <a-card style="margin-bottom: 3rem">
@@ -107,31 +107,31 @@
         :sub-total="17.1"></number-info>
     </a-card>
 
-    <h2># TagSelect 组件 </h2>
+    <h2># TagSelect Component </h2>
 
     <a-divider> TagSelect </a-divider>
     <a-card style="margin-bottom: 3rem">
       <tag-select>
-        <tag-select-option value="cat1">类目1</tag-select-option>
-        <tag-select-option value="cat2">类目2</tag-select-option>
-        <tag-select-option value="cat3">类目3</tag-select-option>
-        <tag-select-option value="cat4">类目4</tag-select-option>
-        <tag-select-option value="cat5">类目5</tag-select-option>
-        <tag-select-option value="cat6">类目6</tag-select-option>
-        <tag-select-option value="cat7">类目7</tag-select-option>
+        <tag-select-option value="cat1">Category 1</tag-select-option>
+        <tag-select-option value="cat2">Category 2</tag-select-option>
+        <tag-select-option value="cat3">Category 3</tag-select-option>
+        <tag-select-option value="cat4">Category 4</tag-select-option>
+        <tag-select-option value="cat5">Category 5</tag-select-option>
+        <tag-select-option value="cat6">Category 6</tag-select-option>
+        <tag-select-option value="cat7">Category 7</tag-select-option>
       </tag-select>
     </a-card>
 
-    <h2># DescriptionList 组件 </h2>
+    <h2># DescriptionList Component </h2>
 
     <a-divider> DescriptionList </a-divider>
     <a-card style="margin-bottom: 3rem">
       <description-list title="组名称" size="small">
-        <description-list-item term="负责人">林东东</description-list-item>
-        <description-list-item term="角色码">1234567</description-list-item>
-        <description-list-item term="所属部门">XX公司-YY部</description-list-item>
-        <description-list-item term="过期时间">2018-08-08</description-list-item>
-        <description-list-item term="描述">这段描述很长很长很长很长很长很长很长很长很长很长很长很长很长很长...</description-list-item>
+        <description-list-item term="Principal">Sir Edmund Halley</description-list-item>
+        <description-list-item term="Role code">1234567</description-list-item>
+        <description-list-item term="Department">XX company - YY department</description-list-item>
+        <description-list-item term="Expire date">2018-08-08</description-list-item>
+        <description-list-item term="Description">This description is very long, long, long, long, long, long, long, long, long, long, long, long, long, long, long...</description-list-item>
       </description-list>
     </a-card>
 
