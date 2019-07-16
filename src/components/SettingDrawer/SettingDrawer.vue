@@ -40,7 +40,7 @@
         </div>
 
         <div :style="{ marginBottom: '24px' }">
-          <h3 class="setting-drawer-index-title">主题色</h3>
+          <h3 class="setting-drawer-index-title">Theme color</h3>
 
           <div style="height: 20px">
             <a-tooltip class="setting-drawer-theme-color-colorBlock" v-for="(item, index) in colorList" :key="index">
@@ -57,7 +57,7 @@
         <a-divider />
 
         <div :style="{ marginBottom: '24px' }">
-          <h3 class="setting-drawer-index-title">导航模式</h3>
+          <h3 class="setting-drawer-index-title">Navigation mode</h3>
 
           <div class="setting-drawer-index-blockChecbox">
             <a-tooltip>
