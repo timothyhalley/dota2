@@ -116,7 +116,7 @@ import { mapGetters } from 'vuex'
 import { PageView } from '@/layouts'
 import HeadInfo from '@/components/tools/HeadInfo'
 import { Radar } from '@/components'
-import { getRoleList, getServiceList } from '@/api/manage'
+import { getRoleList, getServiceList, getPhotos } from '@/api/manage'
 const DataSet = require('@antv/data-set')
 export default {
   name: 'Workplace',
@@ -135,6 +135,7 @@ export default {
       radarLoading: true,
       activities: [],
       teams: [],
+      photos: [],
       // data
       axis1Opts: {
         dataKey: 'item',
@@ -188,6 +189,10 @@ export default {
     getServiceList().then(res => {
       console.log('workplace -> call getServiceList()', res)
     })
+    getPhotos().then(res => {
+      console.log('/workplace/photos -> call getPhotos()', res)
+      this.photos = res.result;
+    })
   },
   mounted () {
     this.getProjects()
@@ -232,7 +237,8 @@ export default {
         })
     },
     addToLog () {
-      console.log('what the hell is going on here!!!')
+      console.log('Send message to console browser log --> hello!')
+      console.log('here is a photo\n', this.photos)
     }
   }
 }
