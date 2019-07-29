@@ -15,6 +15,7 @@ const serverList = (options) => {
 
   for (let i = 1; i < next; i++) {
     const tmpKey = key + i
+    console.log('HEY - this is a mock service', i)
     result.push({
       key: tmpKey,
       id: tmpKey,
