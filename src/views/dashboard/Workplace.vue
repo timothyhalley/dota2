@@ -190,8 +190,8 @@ export default {
       console.log('workplace -> call getServiceList()', res)
     })
     getPhotos().then(res => {
-      console.log('/workplace/photos -> call getPhotos()', res)
-      this.photos = res.result;
+      console.log('/workplace -> call getPhotos()', res)
+      this.photos = res.result
     })
   },
   mounted () {
@@ -225,6 +225,7 @@ export default {
       this.radarLoading = true
       this.$http.get('/workplace/radar')
         .then(res => {
+          console.log('radar data from http: ', res.result)
           const dv = new DataSet.View().source(res.result)
           dv.transform({
             type: 'fold',
