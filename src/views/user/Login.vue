@@ -259,7 +259,7 @@ export default {
     },
     requestFailed (err) {
       this.$notification['error']({
-        message: '错误',
+        message: 'Error',
         description: ((err.response || {}).data || {}).message || 'Request error, please try again later',
         duration: 4
       })
