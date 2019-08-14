@@ -15,6 +15,9 @@ import './core/use'
 import './permission' // permission control
 import './utils/filter' // global filter
 
+// msal.js authentication lib
+Vue.prototype.$AuthService = new AuthService()
+
 Vue.config.productionTip = false
 
 // mount axios Vue.$http and this.$http
