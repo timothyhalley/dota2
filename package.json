@@ -23,6 +23,7 @@
     "md5": "^2.2.1",
     "mockjs2": "^1.0.5",
     "moment": "^2.24.0",
+    "msal": "^1.1.2",
     "nprogress": "^0.2.0",
     "opencollective-postinstall": "^2.0.2",
     "viser-vue": "^2.4.6",

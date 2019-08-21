@@ -126,7 +126,7 @@
 
     <a-divider> DescriptionList </a-divider>
     <a-card style="margin-bottom: 3rem">
-      <description-list title="组名称" size="small">
+      <description-list title="Group name" size="small">
         <description-list-item term="Principal">Sir Edmund Halley</description-list-item>
         <description-list-item term="Role code">1234567</description-list-item>
         <description-list-item term="Department">XX company - YY department</description-list-item>
