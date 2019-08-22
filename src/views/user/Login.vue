@@ -93,13 +93,13 @@
       <div class="user-login-other">
         <span>Other login methods</span>
         <a>
-          <a-icon class="item-icon" type="alipay-circle"></a-icon>
+          <a-icon class="item-icon" type="linkedin"></a-icon>
         </a>
         <a>
-          <a-icon class="item-icon" type="taobao-circle"></a-icon>
+          <a-icon class="item-icon" type="google"></a-icon>
         </a>
         <a>
-          <a-icon class="item-icon" type="weibo-circle"></a-icon>
+          <a-icon class="item-icon" type="amazon"></a-icon>
         </a>
         <router-link class="register" :to="{ name: 'register' }">Register account</router-link>
       </div>

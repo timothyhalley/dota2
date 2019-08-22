@@ -27,8 +27,8 @@ router.beforeEach((to, from, next) => {
           .then(res => {
             const roles = res.result && res.result.role
             store.dispatch('GenerateRoutes', { roles }).then(() => {
-              // 根据roles权限生成可访问的路由表
-              // 动态添加可访问路由表
+              // Generate accessible routing tables based on roles
+              // Dynamically add accessible routing tables
               router.addRoutes(store.getters.addRouters)
               const redirect = decodeURIComponent(from.query.redirect || to.path)
               if (to.path === redirect) {

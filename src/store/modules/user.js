@@ -33,12 +33,13 @@ const user = {
   },
 
   actions: {
-    // 登录
+    // Login
     Login ({ commit }, userInfo) {
       return new Promise((resolve, reject) => {
         login(userInfo).then(response => {
           const result = response.result
           Vue.ls.set(ACCESS_TOKEN, result.token, 7 * 24 * 60 * 60 * 1000)
+          console.log('action: login --> ', result.token)
           commit('SET_TOKEN', result.token)
           resolve()
         }).catch(error => {

@@ -1,14 +1,14 @@
 IconSelector
 ====
 
-> 图标选择组件，常用于为某一个数据设定一个图标时使用
-> eg: 设定菜单列表时，为每个菜单设定一个图标
+> Icon selection component, often used when setting an icon for a certain data
+> eg: Set an icon for each menu when setting up the menu list
 
-该组件由 [@Saraka](https://github.com/saraka-tsukai) 封装
+The component consists of [@yeti1](https://github.com/timothyhalley) Package
 
 
 
-### 使用方式
+### Way of use
 
 ```vue
 <template>
@@ -43,6 +43,6 @@ export default {
 ### 事件
 
 
-| 名称   | 说明                       | 类型   | 默认值 |
+| Name   | Description                | Type   | Default |
 | ------ | -------------------------- | ------ | ------ |
-| change | 当改变了 `icon` 选中项触发 | String | -      |
+| change | Triggered when the `icon` selection is changed | String | -      |
