@@ -94,6 +94,12 @@ module.exports = {
     // development server port 8000
     // port: 8000
     proxy: {
+      '/api/auth': {
+        // target: 'https://cascadezen.b2clogin.com/cascadezen.onmicrosoft.com/oauth2/v2.0/authorize?p=B2C_1_sign_in',
+        target: 'https://api.nasa.gov/planetary/apod?api_key=NNKOjkoul8n1CH18TWA9gwngW1s1SmjESPjNoUFo',
+        ws: false,
+        changeOrigin: true
+      },
       '/api': {
         target: 'https://jsonplaceholder.typicode.com',
         ws: false,
